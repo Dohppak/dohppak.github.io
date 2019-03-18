@@ -7,7 +7,7 @@ export default () => (
   <Layout>
     <CenterWrap>
       <Helmet>
-        <title>404 &middot; Ken Powers</title>
+        <title>404 &middot; Sorry</title>
       </Helmet>
       <h2>404</h2>
       <p>Whoops! I can&#8217;t find what you&#8217;re looking for.</p>

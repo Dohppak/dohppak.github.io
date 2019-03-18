@@ -1,6 +1,6 @@
-# knpw.rs
+# seungheondoh
 
-With Ken Powers comes Ken Responsibility.
+DataScientist & Desinger
 
 This is the source code for my [personal website][web]. Built with [GatsbyJS]
 and deployed to [Netlify].

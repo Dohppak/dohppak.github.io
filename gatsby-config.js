@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    author: 'Ken Powers',
-    title: 'Ken Powers',
-    siteUrl: 'https://knpw.rs',
-    description: 'With Ken Powers Comes Ken Responsibility',
+    author: 'seungheondoh',
+    title: 'seungheondoh',
+    siteUrl: 'https://dohppak.github.io',
+    description: 'With seungheondoh',
   },
   plugins: [
     'gatsby-plugin-catch-links',
@@ -18,31 +18,36 @@ module.exports = {
         name: 'pages',
       },
     }, {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [{
-          resolve: 'gatsby-remark-prismjs',
-          options: {
-            classPrefix: 'language-',
-          },
-        }, {
-          resolve: 'gatsby-remark-images',
-          maxWidth: 950,
-        }],
-      },
-    }, {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-46190412-1',
-      },
-    }, {
       resolve: 'gatsby-plugin-sitemap',
     }, {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://knpw.rs',
+        siteUrl: 'https://dohppak.github.io',
       },
     }, {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-katex',
+            options: {
+              strict: 'ignore',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+            },
+          },
+        ],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-feed',
       options: {
         query: `{

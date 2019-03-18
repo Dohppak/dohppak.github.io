@@ -32,6 +32,9 @@ const H1 = styled.h1(({ theme }) => ({
 }));
 
 const Small = styled.small({
+  fontFamily: 'Times',
+  fontWeight: 'bold',
+  fontStyle: 'italic',
   fontSize: '75%',
   opacity: 0.35,
 });
@@ -39,27 +42,28 @@ const Small = styled.small({
 const Nav = styled.nav(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
+  fontWeight: 'normal',
   justifyContent: 'space-between',
   textTransform: 'uppercase',
   a: {
     marginLeft: theme.spacing,
+    fontWeight: 'normal',
+    fontSize: '0.8em',
   },
 }));
 
 const SiteHeader = () => (
   <Header>
     <H1>
-      <Small>With</Small>
+      <Link to="/">SeungHeonDoh</Link>
       {' '}
-      <Link to="/">Ken Powers</Link>
-      {' '}
-      <Small>comes Ken Responsibility</Small>
+      <Small>DataScientist & Designer</Small>
     </H1>
     <Nav>
       <Link to="/">Blog</Link>
       <Link to="/about">About</Link>
-      <A href="https://github.com/knpwrs">GitHub</A>
-      <A href="https://twitter.com/knpwrs">Twitter</A>
+      <A href="https://github.com/dohppak">GitHub</A>
+      <A href="#">Twitter</A>
     </Nav>
   </Header>
 );

@@ -7,7 +7,8 @@ import last from 'lodash/last';
 import { Link as GatsbyLink } from 'gatsby';
 import TagsList from './tags-list';
 
-const groupPosts = posts => groupBy(posts, p => last(p.frontmatter.date.split(' ')));
+const groupPosts = posts => groupBy(posts, p => last(p.frontmatter.tags.split(' ')));
+
 
 const Header = styled.header(({ theme }) => ({
   display: 'flex',
@@ -20,9 +21,13 @@ const Header = styled.header(({ theme }) => ({
   },
 }));
 
-const H3 = styled.h4(({ theme }) => ({
-  marginBottom: theme.spacing,
-}));
+const H3 = styled.h3({
+  margin: '3em 0 1em 0',
+  fontFamily: 'Times',
+  fontWeight: 'bold',
+  fontStyle: 'italic',
+  opacity: 0.35,
+});
 
 const Article = styled.article(({ theme }) => ({
   marginBottom: theme.spacing,
@@ -41,9 +46,15 @@ const Link = styled(GatsbyLink)(({ theme }) => ({
   },
 }));
 
+const Small = styled.h5({
+  fontWeight: 'normal',
+  color: 'rgba(0,0,0,0.5)',
+  margin: 0,
+});
+
 const Posts = ({ posts }) => {
   const grouped = groupPosts(posts);
-  const years = Object.keys(grouped).sort().reverse();
+  const years = Object.keys(grouped).sort();
   return (
     <section>
       {years.map(year => (
@@ -57,9 +68,11 @@ const Posts = ({ posts }) => {
                     {post.frontmatter.title}
                   </Link>
                 </H4>
-                <time dateTime={dateformat(post.frontmatter.date, 'isoDateTime')}>
-                  {dateformat(post.frontmatter.date, 'mmmm d, yyyy')}
-                </time>
+                <Small>
+                  <time dateTime={dateformat(post.frontmatter.date, 'isoDateTime')}>
+                    {dateformat(post.frontmatter.date, 'mmmm d, yyyy')}
+                  </time>
+                </Small>
               </Header>
               <footer>
                 <TagsList tags={post.frontmatter.tags} />

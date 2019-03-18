@@ -6,9 +6,11 @@ export default () => (
   <Global
     styles={{
       'code[class*="language-"],pre[class*="language-"]': {
+        color: '#f8f8f2',
         background: 'none',
         textShadow: '0 1px rgba(0, 0, 0, 0.3)',
         fontFamily: "Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace",
+        fontSize: '1em',
         textAlign: 'left',
         whiteSpace: 'pre',
         wordSpacing: 'normal',
@@ -24,6 +26,7 @@ export default () => (
         background: '#272822',
         margin: '.5em 0',
         overflow: 'auto',
+        borderRadius: '0.3em',
       },
 
       ':not(pre) > code[class*="language-"]': {

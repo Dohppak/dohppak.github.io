@@ -10,9 +10,11 @@ import site from '../shapes/site';
 import Layout from '../components/layout';
 import TagsList from '../components/tags-list';
 import PostNav from '../components/post-nav';
-import CodeStyle from '../emotion/code';
 import pageContextShape from '../shapes/page-context';
 import postShape from '../shapes/post';
+import 'katex/dist/katex.min.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
+import 'prismjs/themes/prism-okaidia.css';
 
 const Main = styled.main(({ theme }) => ({
   color: theme.textColor,
@@ -42,8 +44,10 @@ const HeaderTitle = styled.h1(({ theme }) => ({
 }));
 
 const HeaderDate = styled.time(({ theme }) => ({
+  fontSize: '1em',
   width: '15%',
   textAlign: 'right',
+  color: 'rgba(0,0,0,0.33)',
   [theme.smallMedia]: {
     width: '100%',
     textAlign: 'center',
@@ -58,6 +62,16 @@ const PostWrap = styled.section(({ theme }) => ({
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
+  marginTop: '4em',
+  marginBottom: '4em',
+  'pre': {
+    fontSize: '0.8em',
+    fontFamily: "Consolas, Monaco, 'Andale Mono', monospace;",
+    textShadow: 'none',
+  },
+  '.gatsby-highlight':{
+    ...theme.centerPadding,
+  },
   '> *': {
     width: '100vw',
     wordWrap: 'break-word',
@@ -67,8 +81,8 @@ const PostWrap = styled.section(({ theme }) => ({
   },
   '> .gatsby-highlight > pre': {
     ...theme.centerPadding,
-    paddingTop: theme.spacing,
-    paddingBottom: theme.spacing,
+    paddingTop: `${theme.spacingPx * 4}px`,
+    paddingBottom: `${theme.spacingPx * 4}px`,
   },
   '>ul,>ol': {
     marginLeft: `${theme.spacingPx * 4}px`,
@@ -94,7 +108,6 @@ const BlogPost = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <CodeStyle />
       <Main>
         <Helmet>
           <title>
@@ -119,7 +132,7 @@ const BlogPost = ({ data, pageContext }) => {
           <Footer>
             {isProduction && (
               <ReactDisqusComments
-                shortname="kenpowers"
+                shortname="Stranger"
                 identifier={post.frontmatter.path}
                 title={post.frontmatter.title}
                 url={fullUrl}

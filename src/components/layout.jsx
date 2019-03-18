@@ -16,7 +16,7 @@ const centerPadding = `calc((100vw - ${maxWidthPx - (2 * spacingPx)}px) / 2)`;
 const smallMedia = `@media(max-width: ${minWidthPx}px)`;
 const largeMedia = `@media(min-width: ${maxWidthPx}px)`;
 const textColor = '#333';
-const accentColor = '#ab4642';
+const accentColor = '#FF9600';
 
 const theme = {
   spacingPx,
@@ -46,11 +46,12 @@ const Layout = ({ children }) => (
           height: '100vh',
           margin: 0,
           padding: 0,
-          fontFamily: 'Lato',
+          fontFamily: 'Helvetica Neue',
+          fontSize: '1em',
+          background: '#F7F7F5',
         },
         'h1,h2,h3,h4': {
-          textTransform: 'uppercase',
-          marginBottom: 0,
+          marginBottom: '0.5em',
         },
         a: {
           textDecoration: 'none',
@@ -62,9 +63,13 @@ const Layout = ({ children }) => (
           },
         },
         blockquote: {
-          background: '#F9F9F9',
+          fontFamily: 'Times',
+          fontWeight: 'bold',
+          fontStyle: 'italic',
+          fontSize: '1.1em',
+          background: '#FFFFFF',
           padding: `${spacingPx * 2}px`,
-          margin: 0,
+          margin: '2em 0 2em 0',
         },
       }}
     />

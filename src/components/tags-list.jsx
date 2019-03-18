@@ -8,6 +8,7 @@ const Small = styled.small({
 });
 
 const A = styled(Link)(({ theme }) => ({
+  fontWeight: 'normal',
   textDecoration: 'none',
   color: theme.textColor,
   transition: 'color 250ms linear',
@@ -19,7 +20,6 @@ const A = styled(Link)(({ theme }) => ({
 
 const CommaSeparatedTags = ({ tags }) => (
   <Small>
-    Topics:
     {' '}
     {tags.split(', ').map((tag, index, array) => (
       <span key={tag}>
