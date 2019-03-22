@@ -48,7 +48,7 @@ const Layout = ({ children }) => (
           padding: 0,
           fontFamily: 'Helvetica Neue',
           fontSize: '1em',
-          background: '#F7F7F5',
+          background: '#FFFFFF',
         },
         'h1,h2,h3,h4': {
           marginBottom: '0.5em',
@@ -67,7 +67,7 @@ const Layout = ({ children }) => (
           fontWeight: 'bold',
           fontStyle: 'italic',
           fontSize: '1.1em',
-          background: '#FFFFFF',
+          background: '#F2F2F2',
           padding: `${spacingPx * 2}px`,
           margin: '2em 0 2em 0',
         },

@@ -57,20 +57,19 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
     <main>
       <Helmet>
         <title>
-          About
+          ABOUT
           {' '}
           &middot;
           {' '}
           {site.title}
         </title>
       </Helmet>
-      <H2>About</H2>
+      <H2>ABOUT</H2>
       <blockquote>
         <P>
-          &quot;Far away across the oceans. An undiscovered paradise. Forget New
-          York and California. There’s a better place – now close your eyes. Take
-          my hand.  We are almost there. Our favorite place on Earth.&quot; -
-          Ylvis
+          &quot;I have been impressed with the urgency of doing.
+          Knowing is not enough, we must apply. Being willing is not enough, we must do.&quot;
+          <br /> -leonardo da vinci
         </P>
       </blockquote>
       <P>

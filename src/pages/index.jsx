@@ -9,7 +9,7 @@ import postShape from '../shapes/post';
 const Index = ({ data: { allMarkdownRemark: { edges: posts } } }) => (
   <Layout>
     <CenterWrap>
-      <h2>Blog</h2>
+      <h2>BLOG</h2>
       <Posts posts={posts.map(post => post.node)} />
     </CenterWrap>
   </Layout>

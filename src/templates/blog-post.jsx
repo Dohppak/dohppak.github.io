@@ -13,8 +13,8 @@ import PostNav from '../components/post-nav';
 import pageContextShape from '../shapes/page-context';
 import postShape from '../shapes/post';
 import 'katex/dist/katex.min.css';
-import 'prismjs/plugins/line-numbers/prism-line-numbers.css';
-import 'prismjs/themes/prism-okaidia.css';
+import 'gatsby-prismjs-dracula';
+
 
 const Main = styled.main(({ theme }) => ({
   color: theme.textColor,
@@ -64,14 +64,8 @@ const PostWrap = styled.section(({ theme }) => ({
   alignItems: 'center',
   marginTop: '4em',
   marginBottom: '4em',
-  'pre': {
-    fontSize: '0.8em',
-    fontFamily: "Consolas, Monaco, 'Andale Mono', monospace;",
-    textShadow: 'none',
-  },
-  '.gatsby-highlight':{
-    ...theme.centerPadding,
-  },
+
+
   '> *': {
     width: '100vw',
     wordWrap: 'break-word',
@@ -79,10 +73,23 @@ const PostWrap = styled.section(({ theme }) => ({
       ...theme.centerPadding,
     },
   },
+  '.gatsby-highlight': {
+    width: '75vw',
+    // ...theme.centerPadding,
+  },
+  'code': {
+    fontSize: '0.9em',
+  },
+  ':not(pre) > code[class*="language-"]': {
+    whiteSpace: 'normal',
+    background: 'none',
+    color: '#333',
+    fontWeight: 'blod',
+  },
   '> .gatsby-highlight > pre': {
-    ...theme.centerPadding,
-    paddingTop: `${theme.spacingPx * 4}px`,
-    paddingBottom: `${theme.spacingPx * 4}px`,
+    // ...theme.centerPadding,
+    paddingTop: `${theme.spacingPx * 2}px`,
+    paddingBottom: `${theme.spacingPx * 2}px`,
   },
   '>ul,>ol': {
     marginLeft: `${theme.spacingPx * 4}px`,

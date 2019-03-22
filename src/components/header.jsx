@@ -60,8 +60,8 @@ const SiteHeader = () => (
       <Small>DataScientist & Designer</Small>
     </H1>
     <Nav>
-      <Link to="/">Blog</Link>
-      <Link to="/about">About</Link>
+      <Link to="/">BLOG</Link>
+      <Link to="/about">ABOUT</Link>
       <A href="https://github.com/dohppak">GitHub</A>
       <A href="#">Twitter</A>
     </Nav>

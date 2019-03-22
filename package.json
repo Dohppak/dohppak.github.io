@@ -14,10 +14,13 @@
   "dependencies": {
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
+    "@gatsby-contrib/gatsby-transformer-ipynb": "^0.5.8",
     "dateformat": "^2.0.0",
     "emotion-theming": "^10.0.5",
     "gatsby": "^2.0.77",
+    "gatsby-image": "^2.0.34",
     "gatsby-plugin-typography": "^2.2.10",
+    "gatsby-prismjs-dracula": "^0.1.15",
     "gatsby-remark-highlights": "^1.3.4",
     "gatsby-remark-katex": "^3.0.4",
     "gatsby-remark-vscode-embed": "^1.0.4",
@@ -31,6 +34,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.7.0",
     "react-helmet": "^5.1.3",
+    "react-highlight": "^0.12.0",
     "react-typography": "^0.16.19",
     "sanitize.css": "^5.0.0",
     "typography": "^0.16.19"
@@ -50,13 +54,13 @@
     "gatsby-plugin-feed": "^2.0.11",
     "gatsby-plugin-google-analytics": "^2.0.8",
     "gatsby-plugin-react-helmet": "^3.0.5",
-    "gatsby-plugin-sharp": "^2.0.17",
+    "gatsby-plugin-sharp": "^2.0.30",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-remark-copy-linked-files": "^2.0.8",
-    "gatsby-remark-images": "^3.0.1",
+    "gatsby-remark-images": "^3.0.10",
     "gatsby-remark-prismjs": "^3.2.5",
     "gatsby-source-filesystem": "^2.0.26",
-    "gatsby-transformer-remark": "^2.3.4",
+    "gatsby-transformer-remark": "^2.3.7",
     "rimraf": "^2.6.1"
   }
 }
