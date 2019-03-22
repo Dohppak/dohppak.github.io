@@ -50,8 +50,14 @@ const Layout = ({ children }) => (
           fontSize: '1em',
           background: '#FFFFFF',
         },
-        'h1,h2,h3,h4': {
-          marginBottom: '0.5em',
+        li: {
+          marginTop: '0.5em',
+        },
+        h4: {
+          marginBlockEnd: '0em',
+        },
+        h5: {
+          color: 'rgba(0,0,0,0.33)',
         },
         a: {
           textDecoration: 'none',

@@ -8,9 +8,9 @@ import Layout from '../components/layout';
 import siteShape from '../shapes/site';
 import excelSetupPng from '../images/excel-setup-diagram.png';
 
-const maLink = <a href="https://www.youtube.com/watch?v=JvUMV1N7eGM">Massachusetts</a>;
-const ghLink = <a href="https://github.com/knpwrs">my GitHub</a>;
-const patsLink = <a href="http://www.patriots.com/">New England Patriots</a>;
+const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html">KAIST</a>;
+const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
+const patsLink = <a href="http://seungheondoh.com/">Design portfolio</a>;
 const cdpLink = <a href="http://cursordanceparty.com">Cursor Dance Party</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
 
@@ -19,6 +19,7 @@ const ResumeHeader = styled.header(({ theme }) => ({
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
+  margin: 0,
   '> h5': {
     margin: '2em 0 1em 0',
   },
@@ -38,13 +39,23 @@ const H3 = styled.h3(({ theme }) => ({
 }));
 const H4 = styled.h4(({ theme }) => ({
   ...theme.centerPadding,
-  marginBottom: theme.spacing,
+  fontFamily: 'Times',
+  fontWeight: 'bold',
+  fontStyle: 'italic',
+  fontSize: '1.1em',
+  color: 'rgba(0,0,0,0.4)',
+  padding: 0,
 }));
 const P = styled.p(({ theme }) => ({
   fontSize: '0.9em',
   ...theme.centerPadding,
 }));
 
+const ResumP = styled.p(({ theme }) => ({
+  margin: 0,
+  fontSize: '0.9em',
+  ...theme.centerPadding,
+}));
 const Ul = styled.ul(({ theme }) => ({
   fontSize: '0.9em',
   ...theme.centerPadding,
@@ -73,41 +84,84 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         </P>
       </blockquote>
       <P>
-        I am a software engineer living and working in {maLink}. I work
-        extensively in Universal JavaScript and HTML5 and have experience in many
-        other technologies. Take a look at {ghLink} to see my personal projects.
+        I’m a Machine Learning Engineer, with a technical background in web front-end
+        development. Now, I'm MS in Culture Technology,{maLink}. I work
+        extensively in DeepLearning specalized in NLP and Sound Data. 
+        Take a look at {ghLink} to see my personal projects.
       </P>
       <P>
-        I also enjoy music, play drums and bass guitar, and am a big time fan of
-        the {patsLink}. Feel free to take a look around and contact me with any
+        I also enjoy Design, Making, and Visualization. You can see my work in {patsLink} Feel free to take a look around and contact me with any
         questions.
       </P>
       <H3>Résumé</H3>
-      <H4>Languages</H4>
-      <Ul>
-        <li>Proficient in: JavaScript (Universal Node / Browser, TypeScript, React), HTML5, CSS3 (SCSS)</li>
-        <li>Familiar with: C# and .NET Framework, Java, Scala, Ruby, Swift, Rust, SQL</li>
-      </Ul>
-      <H4>Software</H4>
-      <Ul>
-        <li>Database: PostgreSQL, MySQL, SQL Server, MongoDB, Redis</li>
-        <li>Server: nginx, Apache httpd</li>
-        <li>Tools: Docker, Git, Jenkins, Travis CI</li>
-        <li>Platforms: macOS, Linux / Unix, Microsoft Windows</li>
-      </Ul>
-      <H4>Experience</H4>
+
+      <H4>Education</H4>
       <ResumeHeader>
-        <h4>SHIFT Media &middot; Front End Lead &middot; Boston, MA</h4>
-        <h5>September 2017 - Present</h5>
+        <h4>Korea Advanced Institute of Science and Technology (KAIST)&middot; South Korea</h4>
+        <h5>2019.02 ~ Current</h5>
       </ResumeHeader>
+        <ResumP>MSc. in Graduate School of Culture Technology </ResumP>
+      <ResumeHeader>
+        <h4>Ulsan National Institute of Science and Technology (UNIST)&middot; South Korea</h4>
+        <h5>2014.03 ~ 2019.02</h5>
+      </ResumeHeader>
+      <ResumP>B.S. in School of Business administration & Industrial Design | GPA : 3.46/4.3</ResumP>
       <Ul>
-        <li>Worked with React, Redux, Electron, and modern JavaScript (TypeScript, Flow, JSX).</li>
-        <li>Designed and implemented WebSocket communication layer with sagas.</li>
-        <li>Designed and implemented generic upload queueing system with sagas.</li>
-        <li>Designed and implemented SVG-based annotation tools.</li>
-        <li>Mentored junior engineers and presented multiple talks about advanced concepts in JavaScript.</li>
-        <li>Hired as Senior Software Engineer. Promoted to Lead Software Engineer in March 2018.</li>
+        <li>Specialization : DataMining and UX research</li>
+        <li>Academic Performance Scholarship Recipient for every semester</li>
+        <li>Core course
+          <br />Data Mining(데이터마이닝-기계학습), Database(데이터베이스), Customer Behavior (소비자행동론), UX research methodology (UX연구방법론), Contextual Design (사용자 맥락 디자인- UCD 심화), Interactive Technology (인터렉티브 기술) </li>
       </Ul>
+
+
+      <H4>Research Interest</H4>
+      <Ul>
+        <li>Deep Learning in Culture Technology, Music Recommend System, Context Recognition</li>
+        <li>Data Visualization, Information Design, Web Design</li>
+      </Ul>
+      <H4>Skills</H4>
+      <Ul>
+        <li>DataScience: Pytorch, Tensorflow, Tensorflow.js</li>
+        <li>Database: MongoDB</li>
+        <li>Web Application: React.js, p5.js</li>
+        <li>Visualization: Processing, Sketch, Adobe illustration, Photoshop, Premiere</li>
+        <li>Programming: Python, R</li>
+      </Ul>
+
+      <H4>Recognition</H4>
+      <ResumeHeader>
+        <h4>NAVER & Like-Lion HACKERTON&middot; South Korea</h4>
+        <h5>2018.12</h5>
+      </ResumeHeader>
+      <ResumP>1st Prize, Professor2vec : Word embedding and measure professor similarity using paper text data.</ResumP>
+      <ResumeHeader>
+        <h4>UNIST NAVER UnderGraduate Poster Award&middot; South Korea</h4>
+        <h5>2017.12</h5>
+      </ResumeHeader>
+      <ResumP>4th Prize, Compare UX analysis and Text-mining : Measure customer similarity using interview text data</ResumP>
+      <ResumeHeader>
+        <h4>Spark Design Award&middot; USA</h4>
+        <h5>2017.09</h5>
+      </ResumeHeader>
+      <ResumP>Concept Design Finalist, Breezi</ResumP>
+
+      <H4>Mooc</H4>
+      <ResumeHeader>
+        <h4>Deep Learning&middot; Udacity</h4>
+        <h5>2018.06 ~ 2018.11</h5>
+      </ResumeHeader>
+      <ResumP>Nano Degree Program</ResumP>
+      <ResumeHeader>
+        <h4>Artificial Intelligence and Machine Learning1,2&middot;KAIST, edwith</h4>
+        <h5>2018.03 ~ 2019.02</h5>
+      </ResumeHeader>
+      <ResumP>Prof. Moon-il-Chul | Dept.of Industrial and Systems Engineering</ResumP>
+      <ResumeHeader>
+        <h4>Machine Learning&middot; KAIST, Kmooc</h4>
+        <h5>2017.12</h5>
+      </ResumeHeader>
+      <ResumP>Prof. Alice Oh | School of computing</ResumP>
+      
     </main>
   </Layout>
 );

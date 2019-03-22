@@ -6,9 +6,7 @@ tags: Python, Sound, DSP
 layout: post
 ---
 
-reference
-- https://datascienceschool.net/view-notebook/691326b7f88644f79ec7ddc9f27f84ec/
-- https://darkpgmr.tistory.com/171
+본 포스팅은 [데이터사이언스 스쿨](https://datascienceschool.net/view-notebook/691326b7f88644f79ec7ddc9f27f84ec/) 과 [다크프로그래머의 블로그](https://darkpgmr.tistory.com/171)를 참고했음을 밝힙니다.
 
 ## How to get frequency domain?
 
@@ -21,13 +19,13 @@ Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.
 - Amplitude(Intensity) : 진폭
 - Frequency : 주파수
 
-<img src='../img/air.png' width=50%>
+<img src='../img/Air.png' width=50%>
 
 ### Frequency (pitch)
 
 일반적으로 소리의 Frequency는 The number of compressed를 표현합니다. 단위는 Hertz를 사용하며, 1Hertz는 1초에 한번 vibration을 의미합니다. 일반적으로 주파수는 우리가 알고 있는 pitch (음)과 동일합니다. 일반적으로 pitch는 사람이 인지하는 음의 높낮이 입니다 (고음과 저음).
 
-<img src='../img/frequency.png' width=70%>
+<img src='../img/Frequency.png' width=70%>
 
 하지만 우리가 Sampling했던 데이터에는 Time과 Amplitude 까지 표현이 가능했습니다. 그렇다면 어떻게 frequency 데이터를 얻을 수 있을까요?
 

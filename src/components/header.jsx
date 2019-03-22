@@ -63,7 +63,7 @@ const SiteHeader = () => (
       <Link to="/">BLOG</Link>
       <Link to="/about">ABOUT</Link>
       <A href="https://github.com/dohppak">GitHub</A>
-      <A href="#">Twitter</A>
+      <A href="http://seungheondoh.com/">Design</A>
     </Nav>
   </Header>
 );
