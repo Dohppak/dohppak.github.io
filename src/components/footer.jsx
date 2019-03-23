@@ -21,15 +21,20 @@ const P = styled.p(({ theme }) => ({
 
 const SiteFooter = () => (
   <Footer>
-    <P>&copy; 2018 Kenneth Powers</P>
+    <P>
+      <small>
+      &copy;2019 SeungHeonDoh's Blog
+      <A inline href="https://github.com/dohppak/blog"> source code in Github</A>
+      </small>
+    </P>
     <P>
       <small>
         This site is built with
         {' '}
-        <A inline href="https://www.gatsbyjs.org/">GatsbyJS</A>
-        . You can find the
+        <A inline href="https://www.gatsbyjs.org/">GatsbyJS </A>
+        and
         {' '}
-        <A inline href="https://github.com/knpwrs/knpw.rs">source code on GitHub</A>
+        <A inline href="https://github.com/knpwrs/knpw.rs">Folk from Kenneth Powers's blog</A>
         .
       </small>
     </P>

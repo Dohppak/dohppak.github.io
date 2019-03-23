@@ -6,15 +6,10 @@ tags: Python, Sound, DSP
 layout: post
 ---
 
-본 포스팅은 [데이터사이언스 스쿨](https://datascienceschool.net/view-notebook/691326b7f88644f79ec7ddc9f27f84ec/) 과 [다크프로그래머의 블로그](https://darkpgmr.tistory.com/171)를 참고했음을 밝힙니다.
+본 포스팅은 문화기술대학원 남주한 교수님의 [GCT634 머신러닝의 음악적 활용](http://mac.kaist.ac.kr/~juhan/gct634/)과 [데이터사이언스 스쿨](https://datascienceschool.net/view-notebook/691326b7f88644f79ec7ddc9f27f84ec/) 과 [다크프로그래머의 블로그](https://darkpgmr.tistory.com/171)를 참고했음을 밝힙니다.
 
 ## How to get frequency domain?
-
-### Sound?
-
-소리는 일반적으로 진동으로 인한 공기의 압축으로 생성됩니다. 그렇다면 압축이 얼마나 됬느냐에 따라서 표현되것이 바로 Wave(파동)이라고 했습니다. 
-
-Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.
+소리는 일반적으로 진동으로 인한 공기의 압축으로 생성됩니다. 그렇다면 압축이 얼마나 됬느냐에 따라서 표현되것이 바로 Wave(파동)이라고 했습니다. Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.
 - Phase(Degress of displacement) : 위상
 - Amplitude(Intensity) : 진폭
 - Frequency : 주파수

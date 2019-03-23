@@ -64,8 +64,12 @@ const PostWrap = styled.section(({ theme }) => ({
   alignItems: 'center',
   marginTop: '4em',
   marginBottom: '4em',
+  lineHeight: 1.7,
 
-
+  'li p': {
+    marginBlockStart: 0,
+    marginBlockEnd: 0,
+  },
   '> *': {
     width: '100vw',
     wordWrap: 'break-word',
@@ -76,6 +80,13 @@ const PostWrap = styled.section(({ theme }) => ({
   '.gatsby-highlight': {
     width: '75vw',
     // ...theme.centerPadding,
+  },
+  '.gatsby-highlight pre[class*="language-text"]': {
+    backgroundColor: '#F2F2F2',
+  },
+  'pre .language-text': {
+    backgroundColor: '#F2F2F2',
+    color: '#282a36',
   },
   'code': {
     fontSize: '0.9em',
