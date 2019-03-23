@@ -1,6 +1,6 @@
 ---
 title: "언어모델이란 무엇인가?"
-date: "2019-01-13"
+date: "2018-01-13"
 path: /blog/lm
 tags: Python, LanguageModel, NLP
 layout: post

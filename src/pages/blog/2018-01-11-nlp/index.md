@@ -1,6 +1,6 @@
 ---
 title: "자연어 처리에서 딥러닝의 역할"
-date: "2019-01-11"
+date: "2018-01-11"
 path: /blog/nlp
 tags: DeepLearning, NLP
 layout: post

@@ -1,6 +1,6 @@
 ---
 title: "Word & Sentence Representation"
-date: "2019-01-12"
+date: "2018-01-12"
 path: /blog/word
 tags: Representation, Embedding, NLP
 layout: post

@@ -49,6 +49,14 @@ const Layout = ({ children }) => (
           fontFamily: 'Helvetica Neue',
           fontSize: '1em',
           background: '#FFFFFF',
+          '*::selection': {
+            color: accentColor,
+            background: 'none !important',
+          },
+          '*::-moz-selection': {
+            color: accentColor,
+            background: 'none !important',
+          },
         },
         li: {
           marginTop: '0.5em',
