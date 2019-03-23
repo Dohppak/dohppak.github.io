@@ -64,6 +64,13 @@ const Ul = styled.ul(({ theme }) => ({
   marginLeft: `${theme.spacingPx * 4}px`,
 }));
 
+const Ablockquote = styled.blockquote(({ theme }) => ({
+  fontFamily: 'Times',
+  fontWeight: 'bold',
+  fontStyle: 'italic',
+  fontSize: '1.25em',
+}));
+
 const About = ({ data: { site: { siteMetadata: site } } }) => (
   <Layout>
     <main>
@@ -77,13 +84,17 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         </title>
       </Helmet>
       <H2>ABOUT</H2>
-      <blockquote>
+      <Ablockquote>
         <P>
-          &quot;I have been impressed with the urgency of doing.
-          Knowing is not enough, we must apply. Being willing is not enough, we must do.&quot;
-          <br /> -leonardo da vinci
+          &quot;I have been impressed with the urgency of doing.<br />
+          Knowing is not enough, we must apply.<br />
+          Being willing is not enough, we must do.&quot;
+          <br />
+          <small>
+          -leonardo da vinci
+          </small>
         </P>
-      </blockquote>
+      </Ablockquote>
       <P>
         I’m a Machine Learning Engineer, with a technical background in web front-end
         development.<br /> Now, I'm MS in Culture Technology,  {maLink}. I work

@@ -65,7 +65,9 @@ const PostWrap = styled.section(({ theme }) => ({
   marginTop: '4em',
   marginBottom: '4em',
   lineHeight: 1.7,
-
+  // 'blockquote': {
+  //   ...theme.centerPadding,
+  // },
   'li p': {
     marginBlockStart: 0,
     marginBlockEnd: 0,
@@ -78,7 +80,7 @@ const PostWrap = styled.section(({ theme }) => ({
     },
   },
   '.gatsby-highlight': {
-    width: '75vw',
+    width: '74vw',
     // ...theme.centerPadding,
   },
   '.gatsby-highlight pre[class*="language-text"]': {

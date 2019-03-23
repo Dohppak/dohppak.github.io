@@ -16,7 +16,7 @@ layout: post
 
 <img src='../img/Sota.png'>
 
-# Data-Driven Algorithm Design
+## Data-Driven Algorithm Design
 
 - Algorithm : 어떤 문제를 푸는데 있어서 필요한 일련의 명령입니다.
     - a Sequence of instructions that solves a problem.
@@ -51,7 +51,7 @@ layout: post
     - 객체지향 프로그래밍에 최적화 되어있습니다.
     - 코드의 재사용에 용이합니다.
 
-## Hypothesis set in Deep learning
+### Hypothesis set in Deep learning
 
 DAG를 만드는 행위입니다. 노드들을 만들고 노드들의 합인 아키텍처를 만드는 행위가 가설집합을 만드는것 입니다. 뉴럴넷에서 Hypothesis set을 결정함에 따라서, 다음과 같은 요소들이 고려되게 됩니다. 예를들어 layer의 갯수에 따라서 새로운 가설집합이 생기며, dropout이나 
 - 네트워크 아키텍처가 정해지면, 하나의 가설 집합이 됩니다.
@@ -62,7 +62,7 @@ DAG를 만드는 행위입니다. 노드들을 만들고 노드들의 합인 아
 
 <img src='../img/graph.png' width=70%>
 
-## Loss function in Deep Learning
+### Loss function in Deep Learning
 input이 주어졌을때, Y가 될수 있는 경우들의 확률 중 가장 높은 것은?
 
 $$
@@ -108,7 +108,7 @@ $$
 L(\theta) = -\sum_{n=1}^{N}logp_{\theta}(y_{n}|x_{n})
 $$
 
-## Optimization in Deep Learning
+### Optimization in Deep Learning
 
 Loss는 비순환 그래프(DAG)를 거쳐서 계산이 됩니다. 가설이 무수히 많기 때문에 모든 것을 다 시도해 보고 최적인 것을 고르기가 너무 어렵습니다.
 - Local, Iterative Optimization : __Random Guided Search__
@@ -119,7 +119,7 @@ Loss는 비순환 그래프(DAG)를 거쳐서 계산이 됩니다. 가설이 무
     - 장점 : 탐색영역은 작지만 확실하게 방향을 잡을 수 있습니다.
     - 단점 : 학습률이 너무 크거나 작으면 최적값으로 못갈 수도 있습니다.
 
-## Backpropagation
+### Backpropagation
 
 모델을 연결하는 비순환 그래프는 미분 가능한 함수로 구성되어 있습니다. 예를 들면 ouput이 새로운 input으로 들어가고, ouput으로 계산이 됩니다. 즉 chain 형태로 들어가 있습니다. 각 단계들을 미분값이 나오고, 다 곱셈을 적용하면 전체 미분 값을 찾을 수 있습니다.  즉 Loss function의 Gradient를 구할 수 있게되었습니다.
 

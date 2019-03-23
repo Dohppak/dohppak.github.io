@@ -9,6 +9,7 @@ import 'lato-font/css/lato-font.css';
 import Header from './header';
 import Footer from './footer';
 
+
 const minWidthPx = 680;
 const maxWidthPx = 960;
 const spacingPx = 10;
@@ -77,13 +78,15 @@ const Layout = ({ children }) => (
           },
         },
         blockquote: {
-          fontFamily: 'Times',
+          width: '100vw',
+          margin: 0,
+          background: 'rgba(245,245,245,0.5)',
+          ...theme.centerPadding,
+          fontFamily: 'Noto Serif KR',
           fontWeight: 'bold',
-          fontStyle: 'italic',
           fontSize: '1.1em',
-          background: '#F2F2F2',
+          textAlign: 'center',
           padding: `${spacingPx * 2}px`,
-          margin: '2em 0 2em 0',
         },
       }}
     />

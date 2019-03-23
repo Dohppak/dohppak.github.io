@@ -22,9 +22,17 @@ module.exports = {
     }, {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://dohppak.github.io',
+        siteUrl: 'https://seungheondoh.netlify.com/',
       },
     }, {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Noto Serif KR', 'serif'],
+        },
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [

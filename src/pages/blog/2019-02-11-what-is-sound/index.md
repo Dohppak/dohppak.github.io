@@ -30,14 +30,14 @@ Wave에서 저희가 얻을수 있는 정보는 크게 3가지가 있습니다.
     - Pitch : 음정, 소리의 높낮이 / 진동수
     - Timbre : 음색, 소리 감각
     
-물리량/심리량 | Loudenss | pitch | Timebre
-:---:|:---:|:---:|:---:
-읍압(presurre) | 상 | 하 | 하
-주파수(frequency) | 중 | 상 | 중
-스펙트럼(spectrum) | 하 | 하 | 상
-포락선(envelope) | 하 | 하 | 중
-지속시간(duration) | 상 | 하 | 하
+- 물리량과 심리량의 관계
+    - 읍압(presurre) : Loudenss에 가장 큰 영향을 준다.
+    - 주파수(frequency) : Pitch에 가장 큰 영향을 주며, Loudenss와 Timbre 역시 영향이 있다.
+    - 스펙트럼(spectrum) : Timbre에 영향을 준다.
+    - 포락선(envelope) : Timbre에 영향을 준다.
+    - 지속시간(duration) : Loudenss에 가장 큰 영향을 준다.
 
+위 상관관계는 향후에 조금더 구체적으로 알아보도록하자.
 
 ### Sound Intensity (Loudness)
 일반적으로 소리의 세기는 음파에 의한 음향 에너지의 순간 전달량 입니다.($w/m^{2}$). 소리의 크기는 압력으로 표현이 됩니다. 

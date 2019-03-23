@@ -23,7 +23,7 @@ const Header = styled.header(({ theme }) => ({
 
 const H3 = styled.h3({
   margin: '3em 0 1em 0',
-  fontFamily: 'Times',
+  fontFamily: "'Times','Noto Serif KR'",
   fontWeight: 'bold',
   fontStyle: 'italic',
   opacity: 0.35,
