@@ -79,9 +79,17 @@ const Contact = ({ data: { site: { siteMetadata: site } } }) => (
       </Helmet>
       <H2>CONTACT</H2>
       <P>
-      My E-mail is {maLink}, and You can see my development works in {ghLink} and {kaggle}<br />
-      Design works in {design}, and {brunch} <br />
-      If you want to see my personal life, than follow my {instagram} and {linkedin}
+      제 글을 읽으시고 생각을 공유하고 싶으신 분은 언제나 편하게 메일주시길 바랍니다.<br />
+      제 메일은 다음과 같으며 {maLink}, 개발과 관련된 작업은 {ghLink}에 데이터 사이언스관련 작업은 {kaggle}에 있습니다.<br />
+      디자인 작업은 여기 {design},혹은 {brunch} <br />
+      저의 일상은 {instagram}, 직업적인 부분은 {linkedin}에서 확인 하실 수 있습니다.
+      </P>
+      <P>
+        If you want to read my blog and share your thoughts,
+        please feel free to email me. <br />
+        My E-mail is {maLink}, and You can see my development works in {ghLink} and {kaggle}<br />
+        Design works in {design}, and {brunch} <br />
+        If you want to see my personal life, than follow my {instagram} and {linkedin}
       </P>
     </main>
   </Layout>

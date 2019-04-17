@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     author: 'seungheondoh',
     title: 'seungheondoh',
-    siteUrl: 'https://dohppak.github.io',
+    siteUrl: 'https://seungheondoh.netlify.com/',
     description: 'With seungheondoh',
   },
   plugins: [

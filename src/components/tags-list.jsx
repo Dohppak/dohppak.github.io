@@ -4,13 +4,13 @@ import { Link } from 'gatsby';
 import styled from '@emotion/styled';
 
 const Small = styled.small({
-  textTransform: 'uppercase',
+  color: 'rgba(0,0,0,0.5)',
 });
 
 const A = styled(Link)(({ theme }) => ({
   fontWeight: 'normal',
   textDecoration: 'none',
-  color: theme.textColor,
+  color: 'rgba(0,0,0,0.5)',
   transition: 'color 250ms linear',
   ':hover': {
     textDecoration: 'underline',

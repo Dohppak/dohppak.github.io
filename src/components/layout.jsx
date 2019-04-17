@@ -59,8 +59,11 @@ const Layout = ({ children }) => (
             background: 'none !important',
           },
         },
+        ul: {
+          margin: '0',
+        },
         li: {
-          marginTop: '0.5em',
+          marginTop: '0.3em',
         },
         h4: {
           marginBlockEnd: '0em',

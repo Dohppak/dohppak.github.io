@@ -1,8 +1,8 @@
 ---
-title: "브랜딩이란 무엇인가?"
+title: "Branding"
 date: "2016-04-12"
 path: /blog/branding
-tags: Design, Brand, 브랜딩
+tags: Design, Brand, 일상적-생각
 layout: post
 ---
 
