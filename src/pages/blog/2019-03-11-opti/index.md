@@ -1,11 +1,10 @@
 ---
 title: "Optimization of NN"
 date: "2019-03-11"
-path: /blog/overunder
+path: /blog/opti
 tags: Optimization, GradientDescent, DeepLearning
 layout: post
 ---
-
 
 본 포스팅은 Beale Function을 이용하여 한번 다양한 NN optimzation 함수를 구현해보고 해결해 보려고 합니다! 각 최적화 기법들의 특징들을 살펴봅시다. 일반적인 Gradient Descent의 문제점은, Local Minimum 과 Saddle point에 빠지는 경우의 수입니다.
 
@@ -17,7 +16,6 @@ layout: post
     - Adam
 
 ## Gradient Descent
-
 Gradient descent는 제약조건이 없는 convex이고 differentiable한 function의 최적화 문제를 풀기위한 가장 단순한 알고리즘입니다.    
 
 $$
@@ -168,15 +166,13 @@ plt.plot(gd.z_history)
 plt.show()
 ```
 
-<img src="../img/output_8_0.png">
+<img src="../img/output_8_0.png" width=100%>
 
 
 ## Stochastic Gradient Descent
-* 전체 데이터에서 구하지 않고 mini-batch로 랜덤하게 샘플링하여 loss를 구한다.
+전체 데이터에서 구하지 않고 mini-batch로 랜덤하게 샘플링하여 loss를 구한다.
     
-
 ## Momentum method 
-
 파라미터들을 단지 현재의 gradient만 고려하지말고 history 역시 고려해보자. 
 이것은 마치 leaky integrator (IIR filter)와 비슷한 기능을 하게 된다. Gradient에 관성을 넣어주자.
 

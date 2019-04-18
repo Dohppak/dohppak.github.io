@@ -13,6 +13,7 @@ const Footer = styled.footer(({ theme }) => ({
   flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'center',
+  marginTop: '1.25em',
 }));
 
 const P = styled.p(({ theme }) => ({

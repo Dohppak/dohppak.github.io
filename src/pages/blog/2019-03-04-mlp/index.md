@@ -55,29 +55,25 @@ $$
 
 위 간단한 뉴럴넷의 모양을 살펴보면 2가지 구간으로 나눌수 있습니다. 첫번쨰는 $w_{j}^{(1)} x + b_j^{(1)}$ 로 표현되는 Affine transform의 구간입니다. 그리고 이 결과는 $\text{tanh}$ 혹은 $\text{sigmoid}$ 같은 활성함수를 통과하는 Non_linear 구간이 있습니다.
 
-__Linear__
-
+__Linear__<br>
 Affine transform은 선형성을 가지는 대표적인 변환입니다. 선형성은 각 입력에 대해서, 입력값을 증가하면 다른 입력값과는 상관없이 결과값이 커지거나 작아지는 것을 의미합니다. input unit들의 영향력이라고 생각하면 됩니다.
 
 
-__Non-Linear__
-
+__Non-Linear__<br>
 Nonlinear 구간이 등장하는 가장 간단한 이유는 input units간의 interaction을 반영하기 위함입니다. 단순한 linear relation 만 고려한다면, 단순한 linear transform의 합으로 된다. 이러한 linear classifier 는 한계점이 존재하게 됩니다. 이러한 문제들은 Linear한 모델들을 생각하면 편합니다. 예를 들어 Logistic regression과 linear regression을 본다면, closed form solution이나 convex optimization을 가진다는 장점을 가지게 됩니다. 하지만 Linear model는 Linear function을 기반으로 한다는 한계점을 가지게 됩니다. input unit간의 interaction을 반영하지 못하는 결과를 낳게 됩니다.
 
 만약 현실세계의 데이터를 받아본다면, 선형 classifier가 결정되긴 매우 힘들게 됩니다. 때문에 input들의 interaction을 고려할 수 있는 활성화 함수를 도입하게 됩니다. 활성화 함수 $\phi$를 사용하면 XOR 문제 등 비선형 문제를 해결 가능하게 됩니다. 흔히 사용하는 활성화 함수들은 nonlinear transformation의 기능을 지원하며, 이는 저희가 알고있는 kernel trick과 유사한 역할을 하게 됩니다. 
 
 <img src="../img/activation.png" width = 70%>
 
-__output to input__
-
+__output to input__<br>
 일반적으로 뉴럴넷은 레이어가 진행되면서, Linear, Non-Linear를 구간을 거친 ouput 데이터가 ($a$) 다시 새로운 input으로 들어가게 됩니다.
 
-<img src="../img/05.nn.png">
+<img src="../img/05.nn.png" width=100%>
 
 위 그림을 보시면 linear한 classifier들이 Affine Transform 을 지나서 Activation을 통과하면 non-linear한 결정 경계가 만들어지는 것을 보실수 있습니다. 강조된 파란색 동그라미는 $\hat{y}$를 표현합니다.
 
-__Ouput Layer__
-
+__Ouput Layer__<br>
 최종적으로 Output layer에서는 무엇을 산출하게 될까요? 그것은 우리가 풀려고 하는 Task에 따라서 달라지게 됩니다. 예를들어 맞냐 틀리냐와 같은 이진 분류 문제의 경우에는 0,1 로 결과물을 내야합니다. 이럴때는 output에 sigmoid를 넣고 theshold을 설정하게 됩니다. 만약에 다양한 선택지중 정답을 찾아야하는 multi-classification task의 경우에는 output에 softmax를 통해서 정답을 찾게 됩니다. 만약 수치를 찾게되는 Regression 문제의 경우에는 그냥 산출 output을 받으면 됩니다. 여기서 본다면 우리의 output layer 설정의 단서를 얻을 수 있습니다. Output layer에는 classification 하려는 class 갯수만큼 설정하게 됩니다.
 
 $$
@@ -160,12 +156,10 @@ def relu(Z):
 
 우리의 목표는 각 input에 따라서 진행되는 weight가 뉴런마다 적당한 variance를 가지면서 좋은 classifier를 형성하는데 있습니다. 다양한 초기화 방법이 있으나 이후 포스트에서 다루기로 하고 이번에는 Gaussian 분포를 따르면서, 0.01값을 곱해서 매우 작은 값을 가지는 weigth를 이용하여 초기화를 하려고 합니다. 가중치의 초기값은 매우 작은값으로 설정하는 것이 좋습니다. 왜냐하면, 가중치가 너무 큰 값을 가지는 경우 활성값을 계산하게 된다면, 활성화 함수가 거의 1 또는 0으로 확실하게 적용되기 떄문입니다. 이는 학습이 느려지는 문제를 가지게 됩니다. 해당 난수의 생성은 numpy패키지의 np.random.randn를 사용하여 해보도록하겠습니다.
 
-__Arguments__
-
+__Arguments__<br>
 layer_dims : Input으로 각 레이어들의 dimension을 받게 됩니다. Dimension이라는 것은 각 레이어별로 존재하는 node의 갯수라고 생각하시면 좋습니다.
 
-__Returns__
-
+__Returns__<br>
 parameters : python dictionary를 return합니다. 
 key는 각 weight와 bias의 string이 들어가게 되며 ("W1", "b1", ..., "WL", "bL"), value에는 해당 값들이 들어가게 됩니다.
 - Wl : weight matrix입니다. shape은 두개의 레이어의 디멘션으로 구성이 됩니다. (layer_dims[l], layer_dims[l-1])
@@ -246,26 +240,20 @@ $$Z^{[l]} = W^{[l]}A^{[l-1]} +b^{[l]}$$
 Activation function의 경우에는 위에서 작성한 Linear_forward를 받아서 가지고 옵니다. 또한 이때 Linear 계산값과, Activation을 통과한 값 모두 backward과정에서 함수 값을 다시 사용하는 경우가 있기 떄문에 cache에 따로 저장을 해둡니다.
 
 
-__Arguments__
-
-A_prev : input data를 받거나 혹은, 이전 단계에서 activation 함수를 통과한 함수가 됩니다. 벡터의 사이즈는 input number이거나, 이전 레이어의 node만큼 들어오게 됩니다. A_prev, W, b 모두 linear_forward와 같은 인자입니다.
-
-W : weights matrix 입니다. numpy array of shape으로 구성되어 있습니다. (size of current layer, size of previous layer)
-
+__Arguments__<br>
+A_prev : input data를 받거나 혹은, 이전 단계에서 activation 함수를 통과한 함수가 됩니다. 벡터의 사이즈는 input number이거나, 이전 레이어의 node만큼 들어오게 됩니다. A_prev, W, b 모두 linear_forward와 같은 인자입니다.<br>
+W : weights matrix 입니다. numpy array of shape으로 구성되어 있습니다. (size of current layer, size of previous layer)<br>
 b : bias vector입니다. numpy array of shape으로 구성되어 있습니다. (size of the current layer, 1)
 
 
-__Returns__
-
-A : Activation function을 통과한 output입니다. 이것은 다음 layer의 input으로 들어가게 됩니다.
+__Returns__<br>
+A : Activation function을 통과한 output입니다. 이것은 다음 layer의 input으로 들어가게 됩니다.<br>
 cache : python dictionary형태입니다. backward pass의 효율적인 계산을 위해서, affine transform을 거친 값과, activation function을 거친 값 모두 저장해둡니다. key는 "linear_cache" ,"activation_cache"에 각각의 value를 저장해 둡니다.
-
 - Sigmoid
 $$\sigma(Z) = \sigma(W A + b) = \frac{1}{ 1 + e^{-(W A + b)}}$$
-
 - ReLU 
 $$A = RELU(Z) = max(0, Z)$$.
-
+<br>
 
 ```python
 def linear_forward(A, W, b):
@@ -298,17 +286,14 @@ def linear_activation_forward(A_prev, W, b, activation):
 
 이제 위에서 정의했던 linear 함수들을 조합하여 새로운 L-layer model을 만들어 봅시다.
 
-__Arguments__
-
-X : input으로 들어오게 될 data 의 matrix입니다. (input size, number of examples)
-
+__Arguments__<br>
+X : input으로 들어오게 될 data 의 matrix입니다. (input size, number of examples)<br>
 parameters : 초기에 선언해 둔 parameter들입니다. 위에서 선언한 initialize_parameters_deep의 결과값입니다.
 
-__Returns__
-
-AL : 마지막 layer의 activation 값입니다.
+__Returns__<br>
+AL : 마지막 layer의 activation 값입니다.<br>
 caches : 모든 linear 부분의 결과 값들과 (there are L-1 of them, indexed from 0 to L-2), 모든 non-linear들의 계산의 결과값들이 저장된 dictionary들이 담긴 list입니다. (there is one, indexed L-1)
-
+<br>
 
 ```python
 def L_model_forward(X, parameters):
@@ -354,20 +339,18 @@ AL
 
 우리는 신경망을 통과한 $\hat{y}$값을 찾을 수 있었습니다. 하지만 우리의 실제 y 레이블과는 다른 값일 가능성이 매우 크기 떄문에 이를 반영하여 학습을 시켜야합니다. Cost function은 여러가지 종류가 있습니다만, 이번의 경우에는 cross-entropy 함수를 사용하려고합니다. 이후에 Cost function에 대해서도 정리해보도록 하겠습니다.
 
-$$-\frac{1}{m} \sum\limits_{i = 1}^{m} (y^{(i)}\log\left(a^{[L] (i)}\right) + (1-y^{(i)})\log\left(1- a^{[L](i)}\right))$$
+$$
+-\frac{1}{m} \sum\limits_{i = 1}^{m} (y^{(i)}\log\left(a^{[L] (i)}\right) + (1-y^{(i)})\log\left(1- a^{[L](i)}\right))
+$$
 
 
-__Arguments__
-
-AL : 뉴럴넷을 통과해서 나오게된 $\hat{y}$ 입니다. shape (1, number of examples)
+__Arguments__<br>
+AL : 뉴럴넷을 통과해서 나오게된 $\hat{y}$ 입니다. shape (1, number of examples)<br>
 Y -- 실제 "label" vector 입니다. (for example: containing 0 if non-cat, 1 if cat), shape (1, number of examples)
 
-__Returns__
-
+__Returns__<br>
 cost : cross-entropy cost
-
-    
-
+<br>
 
 ```python
 def compute_cost(AL, Y):
@@ -432,63 +415,48 @@ $$
 
 첫번쨰는 계산의 그래프의 앞 순서에서 표현됬던, 값들이 전파되는 것을 볼수 있습니다. 예를들어 $dz$를 계산하는데 $da$가 사용되며, $dw$와 $db$를 계산하는데 $dz$가 사용되는것이 그 예시입니다. 두번째는 forward에서 linear 파트에서 계산되었던 값들이 activation function의 미분함수의 input으로 들어가는 점입니다. 또한 forward에서 non-linear에서 계산되었던 값들이 $dw$를 계산하는 과정에서 사용된다는 점입니다.
 
-__Backpropagation Process__
-
+__Backpropagation Process__<br>
 Backpropagation은 다음과 같은 process를 가지게 됩니다.
-
 - LINEAR backward
 - LINEAR -> ACTIVATION backward
 - Layer -> Layer backward
 
 ### Linear backward
-
 Linear 한 영역에서 backward 과정은 다음과 같은 인자를 받게 됩니다.
-
-__Arguments__
-
-dZ : Z의 변화량입니다. linear 부분에서 ouput이 cost function 에 대한 gradient를 나타냅니다.
-
+__Arguments__<br>
+dZ : Z의 변화량입니다. linear 부분에서 ouput이 cost function 에 대한 gradient를 나타냅니다.<br>
 cache : forward과정에서 필요한 값을 받아옵니다. tuple 형태의 (A_prev, W, b) 값들을 받아옵니다.
 
-__Returns__
-
-dA_prev : Linear 구간의 input으로 들어왔었던, 지난 레이어의 activation 을 통과한 A가 cost function에 대한 변화량입니다.
-
-dW : Linear 구간의 weight의 cost function에 대한 변화량 입니다.
-
+__Returns__<br>
+dA_prev : Linear 구간의 input으로 들어왔었던, 지난 레이어의 activation 을 통과한 A가 cost function에 대한 변화량입니다.<br>
+dW : Linear 구간의 weight의 cost function에 대한 변화량 입니다.<br>
 db : Linear 구간의 bias의 cost function 에 대한 변화량 입니다.
 
 <img src="../img/linearback.png" width=30%>
-
-
 ### Linear-Activation backward
-
 Activation function $g(.)$ 에 대해서 Linear-activate backward는 다음과 같이 계산됩니다.
 
-$$dZ^{[l]} = dA^{[l]} * g'(Z^{[l]})$$.  
+$$
+dZ^{[l]} = dA^{[l]} * g'(Z^{[l]})
+$$  
 
-__Arguments__
-
-dA : 현재 layer의 gradient값이 인자로 들어옵니다.
-
+__Arguments__<br>
+dA : 현재 layer의 gradient값이 인자로 들어옵니다.<br>
 cache : forward pass에서 계산했던 linear(Z) 부분과 activation(A) 부분의 계산값들을 받습니다.
 
-__Returns__
+__Returns__<br>
+dA_prev : Linear 구간의 input으로 들어왔었던, 지난 레이어의 activation 을 통과한 A가 cost function에 대한 변화량입니다.<br>
+dW : Linear 구간의 weight의 cost function에 대한 변화량 입니다.<br>
+db : Linear 구간의 bias의 cost function 에 대한 변화량 입니다.<br>
 
-dA_prev : Linear 구간의 input으로 들어왔었던, 지난 레이어의 activation 을 통과한 A가 cost function에 대한 변화량입니다.
-
-dW : Linear 구간의 weight의 cost function에 대한 변화량 입니다.
-
-db : Linear 구간의 bias의 cost function 에 대한 변화량 입니다.
-
-$$ dW^{[l]} = \frac{\partial \mathcal{L} }{\partial W^{[l]}} = \frac{1}{m} dZ^{[l]} A^{[l-1] T} $$
-
-$$ db^{[l]} = \frac{\partial \mathcal{L} }{\partial b^{[l]}} = \frac{1}{m} \sum_{i = 1}^{m} dZ^{[l](i)}$$
-
-$$ dA^{[l-1]} = \frac{\partial \mathcal{L} }{\partial A^{[l-1]}} = W^{[l] T} dZ^{[l]} $$
-
-
-
+$$ 
+dW^{[l]} = \frac{\partial \mathcal{L} }{\partial W^{[l]}} = \frac{1}{m} dZ^{[l]} A^{[l-1] T}
+$$
+$$
+db^{[l]} = \frac{\partial \mathcal{L} }{\partial b^{[l]}} = \frac{1}{m} \sum_{i = 1}^{m} dZ^{[l](i)}
+$$
+$$dA^{[l-1]} = \frac{\partial \mathcal{L} }{\partial A^{[l-1]}} = W^{[l] T} dZ^{[l]}
+$$
 ```python
 def relu_backward(dA, cache):
     Z = cache
@@ -504,8 +472,6 @@ def sigmoid_backward(dA, cache):
     assert (dZ.shape == Z.shape)
     return dZ
 ```
-
-
 ```python
 def linear_backward(dZ, cache):
     A_prev, W, b = cache
@@ -533,11 +499,9 @@ def linear_activation_backward(dA, cache, activation):
 ```
 
 ### L-Model Backward 
-
 이제 위에서 정의했던 backward 함수들을 을 조합하여 새로운 L-layer model을 만들어 봅시다.
 
-__Initializing backpropagation__
-
+__Initializing backpropagation__<br>
 가장먼저 Output layer에서 가장, 끝부분에 있었던 산출물의 loss를 구해줍니다.
 $$
 dAL = - (np.divide(Y, AL) - np.divide(1 - Y, 1 - AL))
@@ -545,13 +509,15 @@ $$
 
 우리의 Gradient는 학습의 핵심이 되는 weight와 bias를 업데이트하는 중요한 역할을 하게 됩니다. 때문에 해당 Weight Gradient값을 dictionary 형태로 저장해 줍시다/
 
-$$grads["dW" + str(l)] = dW^{[l]}$$
+$$
+grads["dW" + str(l)] = dW^{[l]}
+$$
 
-__Arguments__
-AL : 확률 벡터입니다. Forward propagtaion의 최종 아웃풋이기도 합니다.
+__Arguments__<br>
+AL : 확률 벡터입니다. Forward propagtaion의 최종 아웃풋이기도 합니다.<br>
 Y : 실제 y, label 값입니다.
 
-__Returns__
+__Returns__<br>
 grads : Layer 별로 Gradient 값들이 저장되어있는 dictionary입니다
 - grads["dA" + str(l)] = ... 
 - grads["dW" + str(l)] = ...
@@ -631,16 +597,18 @@ grads
 
 파라미터를 업데이트 하는 규칙은 생각보다 간편합니다. Learning rate인 $\alpha$ 에 Gradient를 곱해서 현재의 parameter에 빼주면 새로운 parameter가 됩니다.
 
-$$ W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]} $$
-$$ b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]} $$
+$$
+W^{[l]} = W^{[l]} - \alpha \text{ } dW^{[l]}
+$$
+$$
+b^{[l]} = b^{[l]} - \alpha \text{ } db^{[l]}
+$$
 
-__Arguments__
-
+__Arguments__<br>
 parameters : 파라미터들이 담겨져 있는 parameter dictionary입니다.
 grads : Gradient들이 담겨있는 입니다
 
-__Returns__
-
+__Returns__<br>
 parameters : 업데이트되어있는 파라미터들이 담긴 dictionary입니다
 - parameters["W" + str(l)] = ... 
 - parameters["b" + str(l)] = ...

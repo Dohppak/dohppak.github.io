@@ -8,15 +8,12 @@ layout: post
 
 overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡도 혹은 모형의 학습횟수에 따라서 결정이 됩니다.
 
-
 ### 2 Case of Overfitting
-
 - 애초에 모형이 너무 복잡하게 설계 되었기 떄문에 발생한 것이다? -> Machine Learning, Deep Learning
 - Epoch가 증가에 따라서 판별함수가 너무 training set에 fit해졌다? -> Deep Learning
 - hideen neruons 과 layer에 수에 따라서 복잡해 지는것
 
 ### Model Complexity?
-
 - 각 뉴런은 layer-by-layer 그리고 feed-forward 관계로 directed acyclic graph 형태입니다.
 - 각 뉴런들의 activation 과 output은 non-linear transform of weighted sum of inputs 입니다.
 - Model complexity는 데이터의 feautures 개수에 따라 결정이 됩니다.
@@ -44,7 +41,7 @@ overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡
     - Overfitting이 발생하는 곳에서 Early stopping을 한다.
     - Sol : 데이터의 갯수를 늘리거나, Regulariazation을 사용한다.
 
-<img src="../img/06.of1.png">
+<img src="../img/06.of1.png" width=100%>
 
 ### Epoch 증가의 경우
 
@@ -52,7 +49,7 @@ overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡
 - Just right : Training error 는 작고, test error 역시 작다 매우 이상적인 상태이다. 
 - Overfitting : Training error는 작고, test error 는 큰 상태이다. (High Variance)
 
-<img src="../img/06.of2.png">
+<img src="../img/06.of2.png" width=100%>
 
 ### More about Error
 
@@ -65,7 +62,7 @@ overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡
 - Large Weight 가 overfitting을 만든다.
 - Regularization을 해주자!
 
-<img src="../img/06.RG.png">
+<img src="../img/06.RG.png" width=100%>
 
 ## How we solve Over & Underfitting
 

@@ -23,10 +23,9 @@ CNN은 기존의 Fully Connected NerualNetwork와 비교하여 다음과 같은 
 - 필터를 공유 파라미터로 사용하기 때문에, 일반 신공망에 비해 학습 파라미터가 매우 적음
 <br>
 
-<img src="../img/10.CNN.png">
+<img src="../img/10.CNN.png" width=100%>
 
 ## CNN 역사
-
 CNN은 인간의 visual recognition과 높은 연관을 같습니다.
 인간의 시신경으로 부터 시작되는 시각인지의 영역과 매우 동일한 효과를 가지게 됩니다. edges and lines 로 부터 shapes, 그리고 objects 마지막으로 face까지 이어지는 구조를 가지게 됩니다. 아래 영역은 인간의 뇌로부터 Receptive fields size와 feature의 차이를 보이는 것을 보여줍니다.
 

@@ -35,16 +35,6 @@ const H3 = styled.h3(({ theme }) => ({
   fontStyle: 'italic',
   fontSize: '1.25em',
   ...theme.centerPadding,
-  marginBottom: theme.spacing,
-}));
-const H4 = styled.h4(({ theme }) => ({
-  ...theme.centerPadding,
-  fontFamily: 'Times',
-  fontWeight: 'bold',
-  fontStyle: 'italic',
-  fontSize: '1.1em',
-  color: 'rgba(0,0,0,0.4)',
-  padding: 0,
 }));
 const P = styled.p(({ theme }) => ({
   fontSize: '0.9em',
@@ -96,7 +86,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         </P>
       </Ablockquote>
       <P>
-        I’m a Machine Learning Engineer, with a technical background in web front-end
+        Hi, my name is SeungHeon Doh. I’m a Machine Learning Engineer, with a technical background in web front-end
         development.<br /> Now, I'm MS in Culture Technology,  {maLink}. I work
         extensively in DeepLearning specalized in NLP and Sound Data.<br />
         Take a look at {ghLink} to see my personal projects.
@@ -106,9 +96,8 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <br />
         Feel free to take a look around and contact me with any questions.
       </P>
-      <H3>Résumé</H3>
 
-      <H4>Education</H4>
+      <H3>Education</H3>
       <ResumeHeader>
         <h4>Korea Advanced Institute of Science and Technology (KAIST)&middot; South Korea</h4>
         <h5>2019.02 ~ Current</h5>
@@ -129,12 +118,12 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </Ul>
 
 
-      <H4>Research Interest</H4>
+      <H3>Research Interest</H3>
       <Ul>
         <li>Deep Learning in Culture Technology, Music Recommend System, Context Recognition</li>
         <li>Data Visualization, Information Design, Web Design</li>
       </Ul>
-      <H4>Skills</H4>
+      <H3>Skills</H3>
       <Ul>
         <li>DataScience: Pytorch, Tensorflow, Tensorflow.js</li>
         <li>Database: MongoDB</li>
@@ -143,7 +132,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <li>Programming: Python, R</li>
       </Ul>
 
-      <H4>Recognition</H4>
+      <H3>Recognition</H3>
       <ResumeHeader>
         <h4>NAVER & Like-Lion HACKERTON  &middot;  South Korea</h4>
         <h5>2018.12</h5>
@@ -160,7 +149,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </ResumeHeader>
       <ResumP>Concept Design Finalist, Breezi</ResumP>
 
-      <H4>Mooc</H4>
+      <H3>Mooc</H3>
       <ResumeHeader>
         <h4>Deep Learning  &middot;  Udacity</h4>
         <h5>2018.06 ~ 2018.11</h5>
