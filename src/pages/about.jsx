@@ -34,8 +34,20 @@ const H3 = styled.h3(({ theme }) => ({
   fontWeight: 'bold',
   fontStyle: 'italic',
   fontSize: '1.25em',
+  marginBlockStart: '1.5em',
   ...theme.centerPadding,
 }));
+
+const FH3 = styled.h3(({ theme }) => ({
+  fontFamily: 'Times',
+  fontWeight: 'bold',
+  fontStyle: 'italic',
+  fontSize: '1.25em',
+  marginBlockStart: '1.5em',
+  marginBlockEnd: 0,
+  ...theme.centerPadding,
+}));
+
 const P = styled.p(({ theme }) => ({
   fontSize: '0.9em',
   ...theme.centerPadding,
@@ -88,7 +100,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <P>
         Hi, my name is SeungHeon Doh. I’m a Machine Learning Engineer, with a technical background in web front-end
         development.<br /> Now, I'm MS in Culture Technology,  {maLink}. I work
-        extensively in DeepLearning specalized in NLP and Sound Data.<br />
+        extensively in DeepLearning specalized in Music and NLP Data.<br />
         Take a look at {ghLink} to see my personal projects.
       </P>
       <P>
@@ -97,7 +109,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         Feel free to take a look around and contact me with any questions.
       </P>
 
-      <H3>Education</H3>
+      <FH3>Education</FH3>
       <ResumeHeader>
         <h4>Korea Advanced Institute of Science and Technology (KAIST)&middot; South Korea</h4>
         <h5>2019.02 ~ Current</h5>
@@ -116,8 +128,6 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
           <br />UX research methodology (UX연구방법론), Contextual Design (사용자 맥락 디자인- UCD 심화), Interactive Technology (인터렉티브 기술)
         </li>
       </Ul>
-
-
       <H3>Research Interest</H3>
       <Ul>
         <li>Deep Learning in Culture Technology, Music Recommend System, Context Recognition</li>
@@ -131,8 +141,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <li>Visualization: Processing, Sketch, Adobe illustration, Photoshop, Premiere</li>
         <li>Programming: Python, R</li>
       </Ul>
-
-      <H3>Recognition</H3>
+      <FH3>Recognition</FH3>
       <ResumeHeader>
         <h4>NAVER & Like-Lion HACKERTON  &middot;  South Korea</h4>
         <h5>2018.12</h5>
@@ -149,7 +158,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </ResumeHeader>
       <ResumP>Concept Design Finalist, Breezi</ResumP>
 
-      <H3>Mooc</H3>
+      <FH3>Mooc</FH3>
       <ResumeHeader>
         <h4>Deep Learning  &middot;  Udacity</h4>
         <h5>2018.06 ~ 2018.11</h5>

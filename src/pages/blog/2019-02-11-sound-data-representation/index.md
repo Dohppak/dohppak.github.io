@@ -2,7 +2,7 @@
 title: "Sound Data Representation"
 date: "2019-02-11"
 path: /blog/sound-data-representation
-tags: Python, Sound, DSP
+tags: Python, Sound, Digital-Signal-Processing
 layout: post
 ---
 

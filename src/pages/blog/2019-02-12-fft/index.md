@@ -2,7 +2,7 @@
 title: "Frequency domain & FFT"
 date: "2019-02-12"
 path: /blog/fft
-tags: Python, Sound, DSP
+tags: Python, Sound, Digital-Signal-Processing
 layout: post
 ---
 

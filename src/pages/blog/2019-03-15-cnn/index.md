@@ -6,7 +6,7 @@ tags: CNN, DeepLearning
 layout: post
 ---
 
-본 포스팅은 Ian-goodfellow의 [태원님의 블로그](http://taewan.kim/post/cnn/)과 Andrew ug 교수님의 [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome) 강의를 참고했음을 밝힙니다.
+본 포스팅은 [태원님의 블로그](http://taewan.kim/post/cnn/)과 Andrew ug 교수님의 [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome) 강의를 참고했음을 밝힙니다.
 
 
 ## Convolutional Neural Network
@@ -173,22 +173,18 @@ CNN의 구현은 다음과 같이 진행됩니다.
 ### 1. Zero Padding
 
 위에서 언급했듯이 Conv레이어를 지나게 되면서 shrinking 현상이 발생하게 됩니다. 따라서 Padding이 자연스럽게 필요하게 됩니다. Same conv를 구현하기 위해서 Padding이 필요하게 됩니다. np.pad를 활용하여 한번 구현해 봅시다.
-    
-__Argument__
 
+__Argument__<br>
 $X$ : python numpy array of shape (m, n\_H, n\_W, n\_C) 
  - $m$ : batch of m images
  - $n_H$ : 데이터의 Hight
  - $n_W$ : 데이터의 Width
  - $n_C$ : 데이터의 Channel
- 
+
 $pad$ : padding numberd입니다.
 
-__Returns__
-
+__Returns__<br>
 $X\_pad$ : 패딩이 붙은 2D 이미지입니다. (m, n\_H + 2\*pad, n\_W + 2\*pad, n\_C)
-
-
 
 ```python
 import numpy as np
@@ -206,17 +202,15 @@ print(x.shape, x_pad.shape)
 
 
 ### 2. Convolve Window
-
 이번에는 Filter를 이동시키며 convolution 연산하는 과정을 구해보려고 합니다. input의 volume을 받아서(3차원), 모든 position의 input에 filter를 적용해보고자합니다. Convolution 연산은 element wise multiplication으로 이루어집니다.
-    
-__Argument__
+
+__Argument__<br>
 - $a\_slice\_prev$ : Filter가 적용될 Input입니다. (f, f, n\_C\_prev)
 - $W$ : Filter의 사이즈입니다. (f, f, n\_C\_prev)
 - $b$ : Bais입니다. - matrix of shape (1, 1, 1)
-    
-__Returns__
-- $Z$ : Convolution 연산의 결과로 나오는 값입니다.
 
+__Returns__<br>
+- $Z$ : Convolution 연산의 결과로 나오는 값입니다.
 
 ```python
 def conv_single_step(a_slice_prev, W, b):
@@ -228,8 +222,6 @@ def conv_single_step(a_slice_prev, W, b):
     Z = Z + np.float(b)
     return Z
 ```
-
-
 ```python
 np.random.seed(1)
 a_slice_prev = np.random.randn(4, 4, 3)
@@ -258,13 +250,13 @@ $$
 $$
 n_C = \text{number of filters used in the convolution}
 $$
-__Arguments__
+__Arguments__<br>
 - A\_prev : Input으로 들어가는 Matrix입니다. 데이터의 batch m, Hight, Width, Channel이 포함되어 있습니다. (m, n\_H\_prev, n\_W\_prev, n\_C\_prev)
 - W : Weights, Filter입니다. (f, f, n\_C\_prev, n\_C)
 - b : Biases (1, 1, 1, n\_C)
 - hparameters : "stride" 와 "pad"를 결정하는 python dictionary입니다.
 
-__Returns__
+__Returns__<br>
 - Z : conv output입니다. (m, n_H, n_W, n_C)
 - cache : conv_backward() 에 도움을 줄 cache입니다.
 
@@ -409,6 +401,7 @@ print(A)
      [[[-0.22154621  0.51716526  0.48155844]]]]
 
 
+이것으로 간단한 Convolution Layer의 연산과정이 마무리됩니다. 인간이 객체를 인식하는 과정에서부터 시작되서, 시각구조를 모형화 시키는 Convolution Layer는 정말 중요한 개념이라고 생각이 됩니다.
 
 ```python
 

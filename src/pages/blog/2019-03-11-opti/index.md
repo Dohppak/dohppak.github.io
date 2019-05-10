@@ -123,21 +123,14 @@ class GradientDesecnt():
         self.y_history = np.array(self.y_history)
         self.path = np.concatenate((np.expand_dims(self.x_history,1), np.expand_dims(self.y_history, 1)), axis =1).T
 ```
-
-
 ```python
 gd = GradientDesecnt(f ,x_init=0.7, y_init=1.4, learning_rate=0.01)
 ```
-
     x_init:0.700
     y_init:1.400
-
-
-
 ```python
 gd.train(1000)
 ```
-
     steps:0 z:26.496662 x:0.700000 y:1.40000
     steps: 100  z: 0.096636  x: 2.44472  y: 0.32327  dx: -0.41345  dy: -0.16275
     steps: 200  z: 0.021728  x: 2.69244  y: 0.41208  dx: -0.15311  dy: -0.04974
@@ -146,9 +139,6 @@ gd.train(1000)
     steps: 500  z: 0.001523  x: 2.90744  y: 0.47594  dx: -0.03243  dy: -0.00878
     Enough convergence
     steps: 516  z: 0.001355  x: 2.91246  y: 0.47730
-
-
-
 ```python
 print("x: {:.4f}  y: {:.4f}".format(gd.x, gd.y))
 ```
@@ -166,29 +156,31 @@ plt.plot(gd.z_history)
 plt.show()
 ```
 
-<img src="../img/output_8_0.png" width=100%>
+<img src="./output0.png" width=100%>
 
 
 ## Stochastic Gradient Descent
-전체 데이터에서 구하지 않고 mini-batch로 랜덤하게 샘플링하여 loss를 구한다.
-    
+전체 데이터에서 구하지 않고 mini-batch로 랜덤하게 샘플링하여 loss를 구하게 됩니다.
 ## Momentum method 
-파라미터들을 단지 현재의 gradient만 고려하지말고 history 역시 고려해보자. 
-이것은 마치 leaky integrator (IIR filter)와 비슷한 기능을 하게 된다. Gradient에 관성을 넣어주자.
+파라미터들을 단지 현재의 gradient만 고려하지말고 history 역시 고려해보자는게 주요한 아이디어입니다.
+이것은 마치 leaky integrator (IIR filter)와 비슷한 기능을 하게 된다. Gradient에 관성을 넣어주는 것이죠.
 
-- Velocity variable : v를 도입해보자.
-- direction,speed(속력)은 파라미터의 space에서 파라미터의 움직임을 따른다.
-- 모멘텀은 물리학에서 mass(질량) x velocity(속도) 이다.
-- unit 을 mass로 생각해보자
+- Velocity variable : v를 도입해봅시다.
+- direction,speed(속력)은 파라미터의 space에서 파라미터의 움직임을 따르게됩니다.
+- 모멘텀은 물리학에서 mass(질량) x velocity(속도) 입니다.
+- unit 을 mass로 생각해볼 수 있습니다.
 - hyperparameter γ∈[0,1) determines exponential decay
 
 $$
-v_{t+1} = \gamma v_{t} + \frac{\partial \mathcal{L}(w_{t})}{\partial w_{t}}\\
-w_{t+1} = w_{t} - \eta v_{t+1}\\
+v_{t+1} = \gamma v_{t} + \frac{\partial \mathcal{L}(w_{t})}{\partial w_{t}}
+$$
+
+$$
+w_{t+1} = w_{t} - \eta v_{t+1}
 $$
 
 - $v_{t}$ : 누적된 gradients의 관성
-- $w_{t}$ : Gradients
+- $w_{t}$ : Gradients (가속도)
 
 
 ```python
@@ -251,7 +243,6 @@ class MomentumOptimizer():
         self.x_history.append(x)
         self.y_history.append(y)
 
-    
     def train(self, max_steps):
         pre_z = 0.0
         print("steps: {}  z: {:.6f}  x: {:.5f}  y: {:.5f}".format(0, self.func(self.vars), self.x, self.y))
@@ -259,7 +250,6 @@ class MomentumOptimizer():
         for step in range(max_steps):
             self.z = self.func(self.vars)
             self.history_update(self.z, self.x, self.y)
-            
             self.grads = self.gradients(self.vars)
             self.weights_update1(self.grads)
 
@@ -338,8 +328,7 @@ plt.show()
 ```
 
 
-<img src="../img/output_15_0.png")
-
+<img src="./output1.png")
 
 ### Adagrad
 * 경사에 따라서 learning rate를 조금 다르게 해보자. updates를 조절해보자. 
@@ -350,12 +339,18 @@ plt.show()
     * Problem : Decays to zero -> 학습속도가 매우 느려진다.
 
 ### RMSprop
-- To resolve diminishing learning rate
-- Moving average of squared gradient : 무지하게 커지니까 앞에 있는걸, Learning rate의 패널티를 moving average 해준다.
+* 학습 속도의 감소를 막아주는 효과가 있습니다.
+* Moving average of squared gradient : 무지하게 커지니까 앞에 있는걸, Learning rate의 패널티를 moving average 해주게 됩니다.
+* 학습시 Gradient의 미분식에 Normalizae panelity가 들어가는 것입니다.
 
 ### Adam
-* RMSprop + Momentum
+* Adaptive moment estimation입니다.
+* RMSprop + Momentum 입니다.
 * moving average of past and past squared gradients
-* Weight update
 
+### Learning rate decay
+* Iteration이 진행에 따라서 시작부분에서는 크게 움직이고, 후반에는 천천하게 움직이게 됩니다.
 
+$$
+\alpha = \frac{1}{1-decayRate*epochNum}\alpha_{0}
+$$
