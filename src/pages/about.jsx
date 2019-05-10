@@ -11,7 +11,8 @@ import excelSetupPng from '../images/excel-setup-diagram.png';
 const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html">KAIST</a>;
 const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
 const patsLink = <a href="http://seungheondoh.com/">Design portfolio</a>;
-const cdpLink = <a href="http://cursordanceparty.com">Cursor Dance Party</a>;
+const Deep1 = <a href="https://www.coursera.org/account/accomplishments/records/XW79J7DKQGLR">Neural Networks and Deep Learning</a>;
+const Deep2 = <a href="https://confirm.udacity.com/A5NPKLDW">Deep Learning</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
 
 const ResumeHeader = styled.header(({ theme }) => ({
@@ -99,7 +100,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </Ablockquote>
       <P>
         Hi, my name is SeungHeon Doh. I’m a Machine Learning Engineer, with a technical background in web front-end
-        development.<br /> Now, I'm MS in Culture Technology,  {maLink}. I work
+        development.<br /> Now, I'm MS in Culture Technology,{maLink}. I work
         extensively in DeepLearning specalized in Music and NLP Data.<br />
         Take a look at {ghLink} to see my personal projects.
       </P>
@@ -160,7 +161,12 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
 
       <FH3>Mooc</FH3>
       <ResumeHeader>
-        <h4>Deep Learning  &middot;  Udacity</h4>
+        <h4>Neural Networks and Deep Learning  &middot;  Coursera  &middot; {Deep1}</h4>
+        <h5>2019.02 ~ 2019.04</h5>
+      </ResumeHeader>
+      <ResumP>Andrew Ng, Head Teaching Assistant &middot; deeplearning.ai</ResumP>
+      <ResumeHeader>
+        <h4>Deep Learning  &middot;  Udacity  &middot; {Deep2}</h4>
         <h5>2018.06 ~ 2018.11</h5>
       </ResumeHeader>
       <ResumP>Nano Degree Program</ResumP>

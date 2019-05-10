@@ -75,7 +75,7 @@ __Transfer learning__<br>
 ### Future Challenges : Musically meaningful network design
 DeepLearning 기법의 사용에 따라서 feature learning과 end-to-end learning을 맹신하는 것이 아니라, 우리는 music-domian knowledge와 network design이 병행되어야합니다. 예를 들어서 Music domain knowledge의 예시는 musical scores이 될수 있습니다. Musical scores들은 음악 요소의 멜로디 라인이나 화성진행과 같은 다양한 정보를 가지게 됩니다. Audio file에 담겨있지 않은 정보들을 활용한다면, 저희는 performance-related feature도 사용할수 있을 것입니다. (Velocity Change, note duration, different techniques)
 
-지금까지 주요한 Music domain의 DeepLearning을 활용한 Task에 대해서 알아보았습니다. 음악 스트리밍 산업에 영향을 끼치는 딥러닝 기술이 였습니다. Music-classification 과 Auto-tagging이 주가 되었습니다. 이러한 
+지금까지 주요한 Music domain의 DeepLearning을 활용한 Task에 대해서 알아보았습니다. 음악 스트리밍 산업에 영향을 끼치는 딥러닝 기술이 였습니다. Music-classification 과 Auto-tagging이 주가 되었습니다. 접근법은 데이터 크게 1D, 2D, Sample CNN 으로 구성되었습니다. 또한 Computer Vision 혹은 NLP 영역에서 발견된 테크닉들이 연결되기도 했습니다. Transfer learning 이나 혹은 CRNN, Residual networks and squeeze-and-excitation network 가 그 예시입니다. 앞으로는 음악 도메인에 대한 이해 뿐만 아니라, 다른 분야의 모형들을 이해하고 새로운 아키텍쳐를 제안해야할 것으로 보입니다.
 
 ```python
  
