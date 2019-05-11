@@ -2,6 +2,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link, A } from './header-footer-anchor';
+import cvLink from '../docs/SeungHeonDoh(May12).pdf';
+
+const download = <a href={cvLink}>cv</a>;
 
 const Header = styled.header(({ theme }) => ({
   padding: `0 ${theme.spacing}`,
@@ -65,7 +68,7 @@ const SiteHeader = () => (
       {/* <A href="https://github.com/dohppak">GitHub</A>
       <A href="http://seungheondoh.com/">Design</A> */}
       <Link to="/contact">Contact</Link>
-
+      {download}
     </Nav>
   </Header>
 );

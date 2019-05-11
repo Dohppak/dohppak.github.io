@@ -105,7 +105,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         Take a look at {ghLink} to see my personal projects.
       </P>
       <P>
-        I also enjoy Design, Making, and Visualization. You can see my work in {patsLink}
+        I also enjoy Design, Making, and Visualization. You can see my work in {patsLink}. Also, I really like coffee and sparkling water.
         <br />
         Feel free to take a look around and contact me with any questions.
       </P>
@@ -161,12 +161,12 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
 
       <FH3>Mooc</FH3>
       <ResumeHeader>
-        <h4>Neural Networks and Deep Learning  &middot;  Coursera  &middot; {Deep1}</h4>
+        <h4>{Deep1}  &middot;  Coursera</h4>
         <h5>2019.02 ~ 2019.04</h5>
       </ResumeHeader>
       <ResumP>Andrew Ng, Head Teaching Assistant &middot; deeplearning.ai</ResumP>
       <ResumeHeader>
-        <h4>Deep Learning  &middot;  Udacity  &middot; {Deep2}</h4>
+        <h4>{Deep2}  &middot;  Udacity</h4>
         <h5>2018.06 ~ 2018.11</h5>
       </ResumeHeader>
       <ResumP>Nano Degree Program</ResumP>
