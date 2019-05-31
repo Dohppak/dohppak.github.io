@@ -16,7 +16,6 @@ Sequence 모델들의 특징인, 길의의 순서와 위치가 중요한 데이�
 
 ### RNN
 만약 우리가 문장을 좌에서 우로 읽는다고 가정해 봅시다. 처음 읽는 단어를 $x^{(1)}$ 이라고 합시다. 이 하나의 데이터만을 가지고 뉴럴넷을 통해서 output sequence를 예측하게 됩니다. 그 다음 단어 $x^{(2)}$가 input으로 들어온다면, 그때는 이전 sequence의 activation value를 반영하여 두번쨰 sequence의 activation을 연산하는데 사용이 됩니다. 즉 이전 시간의 정보를 활용하여, 이번 시간의 모형을 예측하는데 사용하는 것입니다. 정리한다면 RNN은 이전 sequence의 activation 값이 현재 sequence로 전이되어 학습하게 됩니다.
-
 <img src="../img/RNN.png">
 
 ### Notation
@@ -63,7 +62,6 @@ $$
 $$
 
 이제 단일 element 에 적용되었던 RNN Cell을 전체 sequence에 적용한다면 다음과 같은 그림으로 Forward propagation을 설명할 수 있습니다.
-
 <img src="../img/rnn-step.png">
 
 ### RNN Backpropagation

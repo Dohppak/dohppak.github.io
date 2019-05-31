@@ -15,7 +15,6 @@ layout: post
 RNN은 좋은 Sequence 모델이지만 몇가지 문제가 존재합니다. 예를들어 문장의 길이가 길어짐에 따라서 주어와 후반부에 등장하는 동사의 형이나 시제를 일치해야하는 문제를 들어봅시다. RNN 모듈은 이전 hidden state를 잘 반영하는 모델이지만, hidden state가 많아 질수록 기억해야하는 정보량 역시 많아지는 문제가 발생합니다. 이를 우리는 Long Term dependency라고 부르는데요. 또한 feedforward network에서 발생했던 Vanishing gradients의 문제와 Exploding gradients문제를 가지고 있음을 알 수 있습니다.
 
 예시를 통해 좀더 Long Term dependency에 대해서 알아봅시다. 만약 I grew up in France..... I speck fluent $h_{t+1}$ 이라는 문장이 있다고해봅시다. 과연 $h_{t+1}$에는 어떤 단어가 들어가면 적절할까요?. 우리는 French인 것을 알 수 있습니다. French의 결정적인 단서인 France가 될 것입니다. 하지만 RNN의 경우에는 France라는 인풋이 너무 앞쪽의 Time-step에 있기 때문에 쉽게 비중있는 정보를 반영하기 힘들 것입니다.
-
 <img src="../img/longtermdependencies.png">
 
 ### LSTM Networks
