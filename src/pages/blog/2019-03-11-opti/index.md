@@ -354,3 +354,18 @@ plt.show()
 $$
 \alpha = \frac{1}{1-decayRate*epochNum}\alpha_{0}
 $$
+
+
+### 하이퍼 파라미터 튜닝
+그렇다면 우리는 최대한 최적의 하이퍼 파라미터를 튜닝해주어야 할까요?? 위에서 최적화 알고리즘을 확인해 본다며 우리는 가장 간단하게 learning rate부터 시작해서 모멘텀 값, 아니면 Adam의 beta와 같은 여러 하이퍼 파라미터가 생기는 것을 볼 수 있겠습니다. 최적화 알고리즘 뿐만 아니라, 우리가 모형을 설계할때도 layer의 숫자나 혹은 아키텍처의 순서를 다르게 할 수도 있겠죠. 다양한 하이퍼 파라미터를 튜닝하는 것 역시 optimization의 중요한 이슈가 되었습니다.
+
+일반적인 머신러닝에서 사용된 최적화의 고전적인 방식은 바로 Grid Search입니다. 각 하이퍼 파라미터들의 경우의 수들을 정의해 주고, 그들의 조합을 통해서 Objective function의 변화를 측정해 보는 것이죠. 딥러닝에 경우에는 Random Search가 더 많이 이루어지고 있다고 합니다. 이때 사용하는 진행방식은 바로 Coarse to fine sampling scheme입니다. 
+
+### Coarse to fine sampling scheme
+아래 그림처럼 우리가 2차원의 Hyperparameter space에서 각 포인트들을 샘플링 한다고 해도겠습니다. 우리가 Objective function이 높은 퍼포먼스를 보이는 영역을 발견한다고 했을때, 그 영역에 초점을 맞춰서 dense하게 search를 진행하게 됩니다. 또한 Random한 sampling을 할수도 있습니다.
+
+### Appropriate scale for hyperparameters
+한번 우리가 Learning rate를 찾기위해서 Hyperparameter searching을 한다고 생각해 봅시다. 0.1, 0.2, 0.3 ... 이런식으로 찾아보게 된다면 끝이 없게 될 것입니다. 때문에 scale에 대한 이슈가 등장하게 되었는데요. 저희는 Linear scale을 사용할수도 Log scale을 사용할수도 있을 것입니다. 우선 저희가 해야할 것은 궁금한 가설집단을 규정하는 것입니다. 만약 learning rate라면 0.1 부터 0.0001 사이에서 최적의 파라미터가 궁금하다 같은 것이죠. 이 Lower bound와 Upper bound를 잘 찾을수 있는 scale을 그 다음에 결정하는 것이 좋습니다. 
+1. 가설 영역을 설정한다.
+2. Scale을 설정한다.
+3. Uniform random sampling을 한다.

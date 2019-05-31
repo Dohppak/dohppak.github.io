@@ -6,12 +6,11 @@ tags: underfitting, overfitting, DeepLearning
 layout: post
 ---
 
-overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡도 혹은 모형의 학습횟수에 따라서 결정이 됩니다.
+overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡도 혹은 모형의 학습횟수에 따라서 결정이 됩니다. 모형이 학습 데이터를 충분히 반영하지 못하는 경우를 underfitting, 모형이 학습데이터에 과도하게 적합하여 새로운 데이터를 설명하지 못하는 현상을 overfitting이라고 합니다.
 
 ### 2 Case of Overfitting
 - 애초에 모형이 너무 복잡하게 설계 되었기 떄문에 발생한 것이다? -> Machine Learning, Deep Learning
 - Epoch가 증가에 따라서 판별함수가 너무 training set에 fit해졌다? -> Deep Learning
-- hideen neruons 과 layer에 수에 따라서 복잡해 지는것
 
 ### Model Complexity?
 - 각 뉴런은 layer-by-layer 그리고 feed-forward 관계로 directed acyclic graph 형태입니다.
@@ -66,6 +65,7 @@ overfitting과 underfitting은 모형에 Just-right하지않은 모형의 복잡
 
 ## How we solve Over & Underfitting
 
+
 ### Regluarlization
 
 뉴럴넷의 weight값을 0에 가깝게 만들어주는 효과가 있습니다. 
@@ -106,23 +106,20 @@ problem은 zero mean과 unit variance에 있다.
     - He initalization
         - ReLU에 잘 됩니다.
 
-- Batch normalization
-    - Gradient Vanishing, Gradient Exploding 문제
-    - Internal covariance shift? 
-    - 새로운 layer를 FC, Conv 와 non-linear function 사이에 넣어줍니다.
-    - activation function의 linear 구간을 scaling 해주고 shift 해주면서 더 좋은 nonlinearity position을 잡아냅니다.
-    
-- Layer normalization
+### Batch normalization
+Batch normalization은 Sergey loffe와 Christian Szegedy가 만든 알고리즘입니다. 우리는 위에서 보듯이 Data 에 대한 Normalization에 대해서 이해해봤습니다. 하지만 우리가 더 deep한 뉴럴넷을 설계하게 되면서 $a^{[1]}$,$a^{[2]}$ 와 같은 연산이 들어가는 layer를 만나게 됩니다. 각 hidden 레이어에 나오는 값들을 중간중간에 Normalization을 해주자는 접근이 바로 Batch Normalization입니다. 하지만 여기서는 한가지 이슈가 있습니다. 그렇다면 Activation function 앞과 뒤중 어디에 Normalization을 진행해야할까요? 정답은 앞이라고 합니다. 즉 $a^{[1]}$ 이 아니라 $z^{[1]}$에 Normalization을 넣어주는 것이 좋습니다. 이것은 activation function의 linear 구간을 scaling 해주고 shift 해주면서 더 좋은 nonlinearity position을 잡아냅니다. 
+
+그렇다면 왜 사람들은 Batch Normalization에 이렇게 열광하는 것일까요? 일단 첫번째는 학습속도를 높여준다는 것입니다. Activation function에 들어가기전에 입력들에 대해서 평균을 0으로 분산을 1로 만들어 주게 되는데요. 이것은 입력특성들이 비슷한 범위를 가지게 되면서, 학습의 속도가 증가하는 효과를 가지게 됩니다. 두번째는 Covariate shift를 보정해준다는 점입니다. 만약 우리가 검은 고양이를 분류하는 문제를 푸는 모형을 학습하다가, 색깔이 있는 고양이도 구별하는 문제를 푼다고 해봅시다. 그렇다면 고양이라는 공통요소가 있지만 색이라는 추가적인 정보를 또한 모형이 분류해야합니다. 즉 우리가 $x->y$인 맵핑관계에서 $x$의 확률 분포가 변한다면, 러닝 알고리즘을 다시 트레이닝 시켜야한다는 점입니다. 이것을 뉴럴넷 아키텍쳐의 관점에서 본다면, 새로운 input인 색이 있는 고양이가 들어온다면 학습과정에서 $w$와 $b$의 변화가 발생하게 됩니다. 그것에 따른 hidden unit의 분포도 변하게 되겠죠 $a^{[1]}$,$a^{[2]}$. 이때 Batch Normalization은 이런 hidden unit의 분포가 변하는 량을 줄여줍니다. 즉 고양이에 대한 정보를 최대한 보존해 주는 것이죠. 데이터의 관점에서 본다면, 평균과 분산의 정보가 유지된다는 점입니다. 고양이에 대한 정보에 대해서는 generalization 기능이 향상되겠군요. Gradient Vanishing, Gradient Exploding 문제를 해결해줍니다.
+
+
 
 ### Data Augmentation
-
 데이터의 variance를 주면서 데이터의 양을 증가시킵니다. 오디오 데이터의 경우에는 다음과 같은 방식이 있습니다.
 - Pitch Shifting
 - Resampling
 - Time-stretching
 - Equalization
 - Adding noises
-
 
 ```python
 
