@@ -65,10 +65,8 @@ const SiteHeader = () => (
     <Nav>
       <Link to="/">BLOG</Link>
       <Link to="/about">ABOUT</Link>
-      {/* <A href="https://github.com/dohppak">GitHub</A>
-      <A href="http://seungheondoh.com/">Design</A> */}
       <Link to="/contact">Contact</Link>
-      {download}
+      {/* {download} */}
     </Nav>
   </Header>
 );

@@ -8,7 +8,7 @@ import Layout from '../components/layout';
 import siteShape from '../shapes/site';
 import excelSetupPng from '../images/excel-setup-diagram.png';
 
-const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html">KAIST</a>;
+const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html"> KAIST</a>;
 const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
 const patsLink = <a href="http://seungheondoh.com/">Design portfolio</a>;
 const Deep1 = <a href="https://www.coursera.org/account/accomplishments/records/XW79J7DKQGLR">Neural Networks and Deep Learning</a>;
@@ -88,20 +88,20 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </Helmet>
       <H2>ABOUT</H2>
       <Ablockquote>
-        <P>
+        {/* <P> */}
           &quot;I have been impressed with the urgency of doing.<br />
           Knowing is not enough, we must apply.<br />
           Being willing is not enough, we must do.&quot;
           <br />
+
           <small>
           -leonardo da vinci
           </small>
-        </P>
+        {/* </P> */}
       </Ablockquote>
       <P>
-        Hi, my name is SeungHeon Doh. I’m a Machine Learning Engineer, with a technical background in web front-end
-        development.<br /> Now, I'm MS in Culture Technology,{maLink}. I work
-        extensively in DeepLearning specalized in Music and NLP Data.<br />
+        Hi, my name is SeungHeon Doh. Now, I'm Master student in Culture Technology,{maLink}.<br />
+        I work extensively in DeepLearning specalized in Music and NLP Data.<br />
         Take a look at {ghLink} to see my personal projects.
       </P>
       <P>
@@ -131,7 +131,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </Ul>
       <H3>Research Interest</H3>
       <Ul>
-        <li>Deep Learning in Culture Technology, Music Recommend System, Context Recognition</li>
+        <li>Music Auto-tagging, Music Recommend System, DeepLearning</li>
         <li>Data Visualization, Information Design, Web Design</li>
       </Ul>
       <H3>Skills</H3>
