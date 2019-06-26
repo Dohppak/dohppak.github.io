@@ -2,12 +2,12 @@
 title: "Long Short Term Memory Networks"
 date: "2019-05-31"
 path: /blog/lstm
-tags: Sequence-Model ,LSTM, DeepLearning
+tags: Sequence-Model, LSTM, DeepLearning
 layout: post
 ---
 
 
-- http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+본 게시물은 Long Short Term Memory Networks에 대한 [colah](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)을 블로그 게시글을 번역한 글입니다. 매우 잘 정리되어있는 게시글이고 많은 걸 배웠습니다. 또한 코드구현은 Andrew ug 교수님의 [Neural Networks and Deep Learning](https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome) 강의를 참고했음을 밝힙니다.
 
 ## LSTM (Long Short Term Memory Networks)
 
@@ -37,7 +37,7 @@ Lstm의 정보의 흐름을 이해하기 위해서, 4개의 gate중 가장 가�
 <img src="../img/forget.png">
 
 __Input Gate(Update Gate) & Tanh layer__<br>
-두번째는 현재의 time step의 정보를 얼마나 cell state에 저장할 건지 결정하는 Gate가 있습니다. 이것은 2개의 부분으로 이루어 지는데요. 첫번째는 input gate layer입니다. forget gate와 모델링이 정확하게 일치합니다. 이전 step의 hidden step 과 현재의 input을 받아서 sigmoid로 조절하게 되는 것이죠. 하지만 input gate의 역할은 update입니다. 지금의 정보를 저장하는데 집중하는 것이죠. 두번째 부분은 바로 Tanh layer입니다. 여기서는 ${C_{t}}$를 만들어 냅니다. 여기서는 tanh값이 사용됩니다. 그 결과 우리는 -1과 1사이의 range를 가지는 값을 얻게 됩니다. 이 둘의 * 연산은 새로운 Candidate value로 이후 Cell state를 얼마나 변화시킬 것인지 결정하게 됩니다. 
+두번째는 현재의 time step의 정보를 얼마나 cell state에 저장할 건지 결정하는 Gate가 있습니다. 이것은 2개의 부분으로 이루어 지는데요. 첫번째는 input gate layer입니다. forget gate와 모델링이 정확하게 일치합니다. 이전 step의 hidden step 과 현재의 input을 받아서 sigmoid로 조절하게 되는 것이죠. 하지만 input gate의 역할은 update입니다. 지금의 정보를 저장하는데 집중하는 것이죠. 두번째 부분은 바로 Tanh layer입니다. 여기서는 $tilda{C_{t}}$를 만들어 냅니다. 여기서는 tanh값이 사용됩니다. 그 결과 우리는 -1과 1사이의 range를 가지는 값을 얻게 됩니다. 이 둘의 * 연산은 새로운 Candidate value로 이후 Cell state를 얼마나 변화시킬 것인지 결정하게 됩니다. 
 <img src="../img/input.png">
 
 __Updata Cell state__<br>

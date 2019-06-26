@@ -1,15 +1,12 @@
 ---
-title: "Attention mechanism"
+title: "Attention Mechanism"
 date: "2019-06-07"
 path: /blog/attn
-tags: Sequence-Model ,Attention, DeepLearning
+tags: Sequence-Model, Attention, DeepLearning
 layout: post
 ---
 
-
-- https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html
-- https://distill.pub/2016/augmented-rnns/#attentional-interfaces
-- https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/#.XPoI49MzYWp
+본 게시물은 Attention Network에 대한 [lilianwengh](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html)을 블로그 게시글을 번역한 글입니다. 또한 [distill](https://distill.pub/2016/augmented-rnns/#attentional-interfaces), [mchromiak](https://mchromiak.github.io/articles/2017/Sep/12/Transformer-Attention-is-all-you-need/#.XPoI49MzYWp)의 글을 참고하여 함께 정리했습니다.
 
 ### Attention mechanism
 
@@ -79,7 +76,7 @@ $$
 \alpha_{t,i} = \text{align}(y_t, x_i)
 $$
 
-잠시 멈추고 위로 올라가서 다시 그림을 본다면, Context vector가 형성된 뒤, 우리는 다시 bidirectional_LSTM 네트워크가 존재하는것을 알 수 있습니다. 네 이 과정이 바로 decoding 과정입니다. decoding과정을 거친 후 output을 예측하기 시작할 것입니다. Decoder의 hidden state는 이전 step의 hidden state 그리고 이전의 output, 마지막으로 context vector가 함께 형성하게 됩니다. $s_t=f(s_{t-1}, y_{t-1}, c_t)$ 이 decoder의 hidden state는 매우 중요합니다. 왜냐하면 우리의 alignment function을 형성하는데 사용되기 떄문입니다. 
+잠시 멈추고 위로 올라가서 다시 그림을 본다면, Context vector가 형성된 뒤, 우리는 다시 bidirectional\_LSTM 네트워크가 존재하는것을 알 수 있습니다. 네 이 과정이 바로 decoding 과정입니다. decoding과정을 거친 후 output을 예측하기 시작할 것입니다. Decoder의 hidden state는 이전 step의 hidden state 그리고 이전의 output, 마지막으로 context vector가 함께 형성하게 됩니다. $s_t=f(s_{t-1}, y_{t-1}, c_t)$ 이 decoder의 hidden state는 매우 중요합니다. 왜냐하면 우리의 alignment function을 형성하는데 사용되기 떄문입니다. 
 
 $$
 \text{align}(y_t, x_i) = \frac{\exp(\text{score}(s_{t-1}, a_i))}{\sum_{i'=1}^n \exp(\text{score}(s_{t-1},a_{i'}))}
@@ -104,9 +101,9 @@ Neural Translation Task를 풀기 위해서는 일단 input sequence를 Embeddin
 
 nn.Embedding은 simple lookup table을 만들어 줍니다. lookup table은 embedding을 fixed dictionary와 size를 저장한 객체를 형성해 냅니다. 이떄 필요한 파라미터는 Input size와 Hidden size입니다.
 
-nn.GRU의 경우에는 간소화된 버전의 LSTM입니다. 자세한 내용은 이전 포스팅을 참고해주시고, output으로는 output(seq_len, batch, num_directions * hidden_size)과 hidden(num_layers * num_directions, batch, hidden_size)을 내보냅니다.
+nn.GRU의 경우에는 간소화된 버전의 LSTM입니다. 자세한 내용은 이전 포스팅을 참고해주시고, output으로는 output(seq\_len, batch, num\_directions * hidden\_size)과 hidden(num\_layers * num\_directions, batch, hidden\_size)을 내보냅니다.
 
-forward를 확인해봅시다. input data가 nn.Embedding에 들어간 다음에 torch.view를 통해서 (1,1,-1)로 들어가는 것을 볼수 있습니다. 이는 tensor의 shape을 바꾸어주는 것입니다. 남은 shape은 [1,1,input size x hidden size]가 됩니다. 이는 seq_len, batch, input_size를 뜻하며 GRU로 들어가게 됩니다. 
+forward를 확인해봅시다. input data가 nn.Embedding에 들어간 다음에 torch.view를 통해서 (1,1,-1)로 들어가는 것을 볼수 있습니다. 이는 tensor의 shape을 바꾸어주는 것입니다. 남은 shape은 [1,1,input size x hidden size]가 됩니다. 이는 seq\_len, batch, input\_size를 뜻하며 GRU로 들어가게 됩니다. 
 
 
 ```python
@@ -143,7 +140,7 @@ $$
 \text{score}(s_t,a_i) =W_a[s_t;a_i]
 $$
 
-그 다음은 attn_weights와 encoder의 output를 결합하여 attention이 적용된 context vector를 생성하는 과정입니다. Context vector는 attention weight와 encoder의 결과를 활용하여 진행됩니다. 
+그 다음은 attn\_weights와 encoder의 output를 결합하여 attention이 적용된 context vector를 생성하는 과정입니다. Context vector는 attention weight와 encoder의 결과를 활용하여 진행됩니다. 
 $$
 c_t = \sum_{i=1}^n \alpha_{t,i} a_i
 $$

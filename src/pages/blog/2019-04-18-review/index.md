@@ -1,5 +1,5 @@
 ---
-title: "Deep Learning for Audio-Based Music Classification and Tagging"
+title: "Deep Learning for Audio-Based Music Classification and Tagging(19.01)"
 date: "2019-04-18"
 path: /blog/review
 tags: Music-Tagging, Music-Classification, Paper-review

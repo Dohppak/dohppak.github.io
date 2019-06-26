@@ -11,7 +11,7 @@ import excelSetupPng from '../images/excel-setup-diagram.png';
 const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html"> KAIST</a>;
 const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
 const patsLink = <a href="http://seungheondoh.com/">Design portfolio</a>;
-const Deep1 = <a href="https://www.coursera.org/account/accomplishments/records/XW79J7DKQGLR">Neural Networks and Deep Learning</a>;
+const Deep1 = <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/RA2MDVUMQTPH">Neural Networks and Deep Learning</a>;
 const Deep2 = <a href="https://confirm.udacity.com/A5NPKLDW">Deep Learning</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
 
@@ -116,6 +116,12 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <h5>2019.02 ~ Current</h5>
       </ResumeHeader>
       <ResumP>MSc. in Graduate School of Culture Technology </ResumP>
+      <Ul>
+        <li>Music and Audio Computing Lab</li>
+        <li>Core course
+          <br />Musical Applications of Machine Learning (음악의 머신러닝적 활용), Cognitive Science of Music (음악의 인지과학)
+        </li>
+      </Ul>
       <ResumeHeader>
         <h4>Ulsan National Institute of Science and Technology (UNIST)&middot; South Korea</h4>
         <h5>2014.03 ~ 2019.02</h5>
