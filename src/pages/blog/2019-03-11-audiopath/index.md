@@ -2,7 +2,7 @@
 title: "귀의 청각경로"
 date: "2019-03-11"
 path: /blog/audiopath
-tags: Cognition, Perception, Sound
+tags: Cognition, AudioPathway, Sound
 layout: post
 ---
 본 포스팅은 문화기술대학원 이경면 교수님의 [GCT731 Cognitive Science of Music](https://hss.kaist.ac.kr/sub02/info.php?idx=76)과 [Auditoryneuroscience](https://auditoryneuroscience.com/acoustics)를 참고했음을 밝힙니다.
