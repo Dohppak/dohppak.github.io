@@ -1,5 +1,5 @@
 ---
-title: "Attention Mechanism"
+title: "Attention Mechanism (어텐션 메커니즘)"
 date: "2019-06-07"
 path: /blog/attn
 tags: Sequence-Model, Attention, DeepLearning

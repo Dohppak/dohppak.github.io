@@ -1,5 +1,5 @@
 ---
-title: "Optimization of NN"
+title: "딥러닝 최적화 (Optimization of NN)"
 date: "2019-03-11"
 path: /blog/opti
 tags: Optimization, GradientDescent, DeepLearning

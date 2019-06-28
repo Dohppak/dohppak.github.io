@@ -14,6 +14,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.5",
     "@emotion/styled": "^10.0.5",
+    "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^2.3.0",
     "@gatsby-contrib/gatsby-transformer-ipynb": "^0.5.8",
     "dateformat": "^2.0.0",
     "emotion-theming": "^10.0.5",

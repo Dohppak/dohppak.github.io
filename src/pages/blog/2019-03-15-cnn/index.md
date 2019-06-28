@@ -1,5 +1,5 @@
 ---
-title: "Convolution Neural Network"
+title: "Convolution Neural Network (CNN)"
 date: "2019-03-15"
 path: /blog/cnn
 tags: CNN, DeepLearning

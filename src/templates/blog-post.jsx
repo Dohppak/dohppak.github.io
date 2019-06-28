@@ -14,6 +14,7 @@ import pageContextShape from '../shapes/page-context';
 import postShape from '../shapes/post';
 import 'katex/dist/katex.min.css';
 import 'gatsby-prismjs-dracula';
+import Metatags from '../components/seo';
 
 
 const Main = styled.main(({ theme }) => ({
@@ -123,11 +124,19 @@ const BlogPost = ({ data, pageContext }) => {
   const { title, siteUrl } = data.site.siteMetadata;
   const { next, prev } = pageContext;
 
+  const pathname = post.frontmatter.path;
+  const taglist = post.frontmatter.tags;
   const isProduction = process.env.NODE_ENV === 'production';
   const fullUrl = `${siteUrl}${post.frontmatter.path}`;
 
   return (
     <Layout>
+      <Metatags
+        title={title}
+        url={siteUrl}
+        tag={taglist}
+        pathname={pathname}
+      />
       <Main>
         <Helmet>
           <title>

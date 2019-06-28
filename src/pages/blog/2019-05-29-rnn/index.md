@@ -1,5 +1,5 @@
 ---
-title: "Recurrent Neural Network"
+title: "Recurrent Neural Network (RNN)"
 date: "2019-05-29"
 path: /blog/rnn
 tags: Sequence-Model ,RNN, DeepLearning

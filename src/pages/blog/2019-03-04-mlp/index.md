@@ -1,5 +1,5 @@
 ---
-title: "Deep Feedforward Networks"
+title: "Deep Feedforward Networks (딥뉴럴 네트워크)"
 date: "2019-03-04"
 path: /blog/mlp
 tags: DeepLearning

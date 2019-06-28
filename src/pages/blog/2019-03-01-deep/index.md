@@ -1,5 +1,5 @@
 ---
-title: "Deep Learning의 직관적 이해"
+title: "딥러닝의 직관적 이해"
 date: "2019-03-01"
 path: /blog/deep
 tags: beginner, DeepLearning
@@ -111,7 +111,7 @@ layout: post
 - Gradient Clipping
 - Momentum
 
-
+앞으로는 위 용어들을 하나씩 정리해 볼 예정입니다.
 ```python
 
 ```

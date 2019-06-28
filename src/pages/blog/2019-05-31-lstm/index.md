@@ -1,5 +1,5 @@
 ---
-title: "Long Short Term Memory Networks"
+title: "Long Short Term Memory Networks (LSTM)"
 date: "2019-05-31"
 path: /blog/lstm
 tags: Sequence-Model, LSTM, DeepLearning

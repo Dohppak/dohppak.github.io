@@ -1,10 +1,10 @@
 module.exports = {
   pathPrefix: '/',
   siteMetadata: {
-    author: 'seungheondoh',
-    title: 'seungheondoh',
+    author: 'SeungHeonDoh',
+    title: 'SeungHeonDoh',
     siteUrl: 'https://seungheondoh.netlify.com/',
-    description: 'With seungheondoh',
+    description: 'Music and DeepLearning',
   },
   plugins: [
     'gatsby-plugin-catch-links',
@@ -16,6 +16,24 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    }, {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `tags`],
+        // How to resolve each field`s value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields` values
+          MarkdownRemark: {
+            title: node => node.frontmatter.title,
+            tags: node => node.frontmatter.tags,
+            path: node => node.frontmatter.path,
+          },
+        },
+        // Optional filter to limit indexed nodes
+        filter: (node, getNode) =>
+          node.frontmatter.tags !== 'exempt',
       },
     }, {
       resolve: 'gatsby-plugin-sitemap',
