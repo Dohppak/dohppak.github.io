@@ -1,13 +1,13 @@
 ---
-title: "Programming and DS&A"
+title: "Programming and Data Structure & Algorithm (프로그래밍 그리고 데이터구조와 알고리즘)"
 date: "2019-07-03"
 path: /blog/dsa
-tags: Programming, BigO, DataStructure&Algorithm
+tags: 프로그래밍, 데이터구조, 알고리즘, Ds&A
 layout: post
 ---
 
 
-본 게시물은 DataStructure&Algorithm 에 대한 [ratsgo](https://ratsgo.github.io/data%20structure&algorithm/2017/09/07/algorithm/)을 블로그, [grepsean](https://grepsean.github.io/Algorithms-and-Data-Structures-with-Python-3/) 님의 블로그, 구종만님의 저서 [알고리즘 문제 해결 전략](https://book.algospot.com/)을 참고하여 함께 정리했습니다.
+본 게시물은 Data Structure & Algorithm 에 대한 [ratsgo](https://ratsgo.github.io/data%20structure&algorithm/2017/09/07/algorithm/)을 블로그, [grepsean](https://grepsean.github.io/Algorithms-and-Data-Structures-with-Python-3/) 님의 블로그, 구종만님의 저서 [알고리즘 문제 해결 전략](https://book.algospot.com/)을 참고하여 함께 정리했습니다.
 
 
 ## Programming and DS&A
