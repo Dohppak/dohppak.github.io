@@ -134,7 +134,7 @@ const BlogPost = ({ data, pageContext }) => {
       <Metatags
         title={title}
         url={siteUrl}
-        tag={taglist}
+        tags={taglist}
         pathname={pathname}
       />
       <Main>
