@@ -10,7 +10,7 @@ import excelSetupPng from '../images/excel-setup-diagram.png';
 
 const maLink = <a href="https://www.kaist.ac.kr/html/kr/index.html"> KAIST</a>;
 const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
-const patsLink = <a href="http://seungheondoh.com/">Design portfolio</a>;
+const patsLink = <a href="https://dohppak.github.io/portfolio//">Design portfolio</a>;
 const Deep1 = <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/RA2MDVUMQTPH">Neural Networks and Deep Learning</a>;
 const Deep2 = <a href="https://confirm.udacity.com/A5NPKLDW">Deep Learning</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
