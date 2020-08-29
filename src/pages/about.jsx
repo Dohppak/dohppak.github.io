@@ -156,7 +156,6 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <ResumeHeader>
         <h4>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</h4>
       </ResumeHeader>
-      <ResumP>Collaborate with Prof. Tae Hong Park</ResumP>
 
       <ResumeHeader>
         <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
