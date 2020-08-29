@@ -155,25 +155,21 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <FH3>Experience & Talks</FH3>
       <ResumeHeader>
         <h4>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</h4>
-        <h5>2020</h5>
       </ResumeHeader>
       <ResumP>Collaborate with Prof. Tae Hong Park</ResumP>
 
       <ResumeHeader>
         <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
-        <h5>2020</h5>
       </ResumeHeader>
       <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture </ResumP>
 
       <ResumeHeader>
         <h4>Talks in SKplanet: Audio Preprocessing and Speech Recognition  &middot;  {SKplanet}</h4>
-        <h5>2020</h5>
       </ResumeHeader>
       <ResumP>Audio Auto-tagging and Speech Recognition </ResumP>
       
       <ResumeHeader>
         <h4>Pycon Tutorial: Music and DeepLearning &middot; {Pycon}</h4>
-        <h5>2019</h5>
       </ResumeHeader>
       <ResumP>Digital Signal Processing & Music-Domain Deep Learing</ResumP>
 
