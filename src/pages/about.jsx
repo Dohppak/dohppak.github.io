@@ -142,8 +142,8 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </Ul>
       <H3>Research Interest</H3>
       <Ul>
-        <li>Music Auto-tagging, Music Recommend System, DeepLearning</li>
-        <li>Data Visualization, Information Design, Web Design</li>
+        <li>Music Informational Retrieval, Multi-Media Discovery, Multi-Modal DeepLearning</li>
+        <li>Data Visualization, Music Cognition, Music Generation</li>
       </Ul>
       <FH3>Publication</FH3>
       <ResumeHeader>
