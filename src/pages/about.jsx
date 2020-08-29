@@ -13,6 +13,10 @@ const ghLink = <a href="https://github.com/dohppak">my GitHub</a>;
 const patsLink = <a href="https://dohppak.github.io/portfolio//">Design portfolio</a>;
 const Deep1 = <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/RA2MDVUMQTPH">Neural Networks and Deep Learning</a>;
 const Deep2 = <a href="https://confirm.udacity.com/A5NPKLDW">Deep Learning</a>;
+const Doh2020 = <a href="https://arxiv.org/pdf/2008.01190.pdf">PDF</a>;
+const Doh2020Demo = <a href="https://dohppak.github.io/MusicWordVec/">Demo</a>;
+const Pycon = <a href="https://github.com/Dohppak/Pycon_Tutorial_Music_DeepLearing/">Github</a>;
+const SKplanet = <a href="https://www.youtube.com/watch?v=RxbkEjV7c0o&t=111s/">Video</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
 
 const ResumeHeader = styled.header(({ theme }) => ({
@@ -140,6 +144,32 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <li>Music Auto-tagging, Music Recommend System, DeepLearning</li>
         <li>Data Visualization, Information Design, Web Design</li>
       </Ul>
+      <FH3>Publication</FH3>
+      <ResumeHeader>
+        <h4>Musical Word Embedding: Bridging the Gap between Listening Contexts and Music</h4>
+      </ResumeHeader>
+      <ResumP><b>Seungheon Doh</b>, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
+      <ResumP>Machine Learning for Media Discovery Workshop, International Conference on Machine Learning (ICML), 2020 {Doh2020}{Doh2020Demo}</ResumP>
+      
+      <FH3>Experiment & Presentation</FH3>
+      <ResumeHeader>
+        <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {SKplanet}</h4>
+        <h5>2020</h5>
+      </ResumeHeader>
+      <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture </ResumP>
+
+      <ResumeHeader>
+        <h4>SKlanet Audio Preprocessing and Speech Recognition  &middot;  {SKplanet}</h4>
+        <h5>2020</h5>
+      </ResumeHeader>
+      <ResumP>Audio Auto-tagging and Speech Recognition </ResumP>
+      
+      <ResumeHeader>
+        <h4>Pycon Tutorial: Music and DeepLearning &middot; {Pycon}</h4>
+        <h5>2019</h5>
+      </ResumeHeader>
+      <ResumP>Digital Signal Processing & Music-Domain Deep Learing</ResumP>
+      
       <H3>Skills</H3>
       <Ul>
         <li>DataScience: Pytorch, Tensorflow, Tensorflow.js</li>
@@ -148,44 +178,6 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <li>Visualization: Processing, Sketch, Adobe illustration, Photoshop, Premiere</li>
         <li>Programming: Python, R</li>
       </Ul>
-      <FH3>Recognition</FH3>
-      <ResumeHeader>
-        <h4>NAVER & Like-Lion HACKERTON  &middot;  South Korea</h4>
-        <h5>2018.12</h5>
-      </ResumeHeader>
-      <ResumP>1st Prize, Professor2vec : Word embedding and measure professor similarity using paper text data.</ResumP>
-      <ResumeHeader>
-        <h4>UNIST NAVER UnderGraduate Poster Award  &middot;  South Korea</h4>
-        <h5>2017.12</h5>
-      </ResumeHeader>
-      <ResumP>4th Prize, Compare UX analysis and Text-mining : Measure customer similarity using interview text data</ResumP>
-      <ResumeHeader>
-        <h4>Spark Design Award  &middot;  USA</h4>
-        <h5>2017.09</h5>
-      </ResumeHeader>
-      <ResumP>Concept Design Finalist, Breezi</ResumP>
-
-      <FH3>Mooc</FH3>
-      <ResumeHeader>
-        <h4>{Deep1}  &middot;  Coursera</h4>
-        <h5>2019.02 ~ 2019.04</h5>
-      </ResumeHeader>
-      <ResumP>Andrew Ng, Head Teaching Assistant &middot; deeplearning.ai</ResumP>
-      <ResumeHeader>
-        <h4>{Deep2}  &middot;  Udacity</h4>
-        <h5>2018.06 ~ 2018.11</h5>
-      </ResumeHeader>
-      <ResumP>Nano Degree Program</ResumP>
-      <ResumeHeader>
-        <h4>Artificial Intelligence and Machine Learning1,2  &middot;  KAIST, edwith</h4>
-        <h5>2018.03 ~ 2019.02</h5>
-      </ResumeHeader>
-      <ResumP>Prof. Moon-il-Chul | Dept.of Industrial and Systems Engineering</ResumP>
-      <ResumeHeader>
-        <h4>Machine Learning  &middot;  KAIST, Kmooc</h4>
-        <h5>2017.12</h5>
-      </ResumeHeader>
-      <ResumP>Prof. Alice Oh | School of computing</ResumP>
     </main>
   </Layout>
 );
