@@ -1,6 +1,6 @@
 # seungheondoh
 
-DataScientist & Desinger
+DeepLearning Researcher & Desinger
 
 This is the source code for my [personal website][web]. Built with [GatsbyJS]
 and deployed to [Netlify].

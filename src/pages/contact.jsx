@@ -9,7 +9,7 @@ import siteShape from '../shapes/site';
 
 const brunch = <a href="https://brunch.co.kr/@seung4298">Brunch</a>;
 const linkedin = <a href="https://www.linkedin.com/in/seungheon-doh-61a407142/">Linked in</a>;
-const maLink = <a href="mailto:seung20764298@gmail.com">seung20764298@gmail.com</a>;
+const maLink = <a href="mailto:seungheon.doh@gmail.com">seungheon.doh@gmail.com</a>;
 const ghLink = <a href="https://github.com/dohppak">github</a>;
 const design = <a href="http://seungheondoh.com/">Design portfolio</a>;
 const kaggle = <a href="https://www.kaggle.com/dohppak">kaggle</a>;

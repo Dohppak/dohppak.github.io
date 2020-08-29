@@ -60,7 +60,7 @@ const SiteHeader = () => (
     <H1>
       <Link to="/">SeungHeonDoh</Link>
       {' '}
-      <Small>DataScientist & Designer</Small>
+      <Small>DeepLearning Researcher & Designer</Small>
     </H1>
     <Nav>
       <Link to="/">BLOG</Link>
