@@ -158,7 +158,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </ResumeHeader>
 
       <ResumeHeader>
-        <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
+        <h4>Korean translator, NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
       </ResumeHeader>
       <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture </ResumP>
 
