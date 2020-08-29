@@ -152,25 +152,13 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <ResumP>Seungheon Doh, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
       <ResumP>Machine Learning for Media Discovery Workshop, International Conference on Machine Learning (ICML), 2020 &middot; {Doh2020} &middot; {Doh2020Demo}</ResumP>
       
-      <FH3>Experience & Talks</FH3>
-      <ResumeHeader>
-        <h4>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</h4>
-      </ResumeHeader>
-
-      <ResumeHeader>
-        <h4>Korean translator, NYU DeepLearning DS-GA 1008 </h4>
-      </ResumeHeader>
-      <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture &middot; {LeCun}</ResumP>
-
-      <ResumeHeader>
-        <h4>Talks in SKplanet: Audio Preprocessing and Speech Recognition </h4>
-      </ResumeHeader>
-      <ResumP>Digital Signal Processing & Audio-Domain Deep Learing &middot; {SKplanet}</ResumP>
-      
-      <ResumeHeader>
-        <h4>Pycon Tutorial: Music and DeepLearning</h4>
-      </ResumeHeader>
-      <ResumP>Digital Signal Processing & Music-Domain Deep Learing &middot; {Pycon}</ResumP>
+      <H3>Experiences & Talks</H3>
+      <Ul>
+        <li>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</li>
+        <li>Korean translator, NYU DeepLearning DS-GA 1008 &middot; Yann LeCun & Alfredo Canziani {LeCun}</li>
+        <li>Digital Signal Processing and Speech Recognition, SK planet 2020 {SKplanet}</li>
+        <li>Pycon Tutorial: Music and DeepLearning, PyconKR 2019 {Pycon}</li>
+      </Ul>
 
       <H3>Teaching Experiences</H3>
       <Ul>
