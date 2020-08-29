@@ -173,15 +173,11 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </ResumeHeader>
       <ResumP>Digital Signal Processing & Music-Domain Deep Learing</ResumP>
 
-      <FH3>Teaching Experiences</FH3>
-      <ResumeHeader>
-        <h4>GCT731 Topics in Music Technology: Cognitive Science of Music &middot; KAIST GSCT</h4>
-        <h5>Spring, 2020</h5>
-      </ResumeHeader>
-      <ResumeHeader>
-        <h4>GCT576 Social Computing &middot; KAIST GSCT</h4>
-        <h5>Fall, 2019</h5>
-      </ResumeHeader>
+      <H3>Teaching Experiences</H3>
+      <Ul>
+        <li>GCT731 Topics in Music Technology: Cognitive Science of Music &middot; KAIST GSCT (Spring, 2020)</li>
+        <li>GCT576 Social Computing &middot; KAIST GSCT (Fall, 2019)</li>
+      </Ul>
       
       <H3>Skills</H3>
       <Ul>
