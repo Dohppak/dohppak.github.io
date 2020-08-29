@@ -158,19 +158,19 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       </ResumeHeader>
 
       <ResumeHeader>
-        <h4>Korean translator, NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
+        <h4>Korean translator, NYU DeepLearning DS-GA 1008 </h4>
       </ResumeHeader>
-      <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture </ResumP>
+      <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture &middot; {LeCun}</ResumP>
 
       <ResumeHeader>
-        <h4>Talks in SKplanet: Audio Preprocessing and Speech Recognition  &middot;  {SKplanet}</h4>
+        <h4>Talks in SKplanet: Audio Preprocessing and Speech Recognition </h4>
       </ResumeHeader>
-      <ResumP>Audio Auto-tagging and Speech Recognition </ResumP>
+      <ResumP>Digital Signal Processing & Audio-Domain Deep Learing &middot; {SKplanet}</ResumP>
       
       <ResumeHeader>
-        <h4>Pycon Tutorial: Music and DeepLearning &middot; {Pycon}</h4>
+        <h4>Pycon Tutorial: Music and DeepLearning</h4>
       </ResumeHeader>
-      <ResumP>Digital Signal Processing & Music-Domain Deep Learing</ResumP>
+      <ResumP>Digital Signal Processing & Music-Domain Deep Learing &middot; {Pycon}</ResumP>
 
       <H3>Teaching Experiences</H3>
       <Ul>
