@@ -17,6 +17,7 @@ const Doh2020 = <a href="https://arxiv.org/pdf/2008.01190.pdf">PDF</a>;
 const Doh2020Demo = <a href="https://dohppak.github.io/MusicWordVec/">Demo</a>;
 const Pycon = <a href="https://github.com/Dohppak/Pycon_Tutorial_Music_DeepLearing/">Github</a>;
 const SKplanet = <a href="https://www.youtube.com/watch?v=RxbkEjV7c0o&t=111s/">Video</a>;
+const LeCun = <a href="https://github.com/Atcold/pytorch-Deep-Learning">Github</a>;
 const esdLink = <a href={excelSetupPng}>full setup diagram</a>;
 
 const ResumeHeader = styled.header(({ theme }) => ({
@@ -148,18 +149,24 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <ResumeHeader>
         <h4>Musical Word Embedding: Bridging the Gap between Listening Contexts and Music</h4>
       </ResumeHeader>
-      <ResumP><b>Seungheon Doh</b>, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
-      <ResumP>Machine Learning for Media Discovery Workshop, International Conference on Machine Learning (ICML), 2020 {Doh2020}{Doh2020Demo}</ResumP>
+      <ResumP>Seungheon Doh, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
+      <ResumP>Machine Learning for Media Discovery Workshop, International Conference on Machine Learning (ICML), 2020 &middot; {Doh2020} &middot; {Doh2020Demo}</ResumP>
       
-      <FH3>Experiment & Presentation</FH3>
+      <FH3>Experience & Talks</FH3>
       <ResumeHeader>
-        <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {SKplanet}</h4>
+        <h4>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</h4>
+        <h5>2020</h5>
+      </ResumeHeader>
+      <ResumP>Collaborate with Prof. Tae Hong Park</ResumP>
+
+      <ResumeHeader>
+        <h4>Korean translator at NYU DeepLearning DS-GA 1008 &middot; {LeCun}</h4>
         <h5>2020</h5>
       </ResumeHeader>
       <ResumP>Yann LeCun & Alfredo Canziani's Deep Learning Lecture </ResumP>
 
       <ResumeHeader>
-        <h4>SKlanet Audio Preprocessing and Speech Recognition  &middot;  {SKplanet}</h4>
+        <h4>Talks in SKplanet: Audio Preprocessing and Speech Recognition  &middot;  {SKplanet}</h4>
         <h5>2020</h5>
       </ResumeHeader>
       <ResumP>Audio Auto-tagging and Speech Recognition </ResumP>
@@ -169,6 +176,16 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <h5>2019</h5>
       </ResumeHeader>
       <ResumP>Digital Signal Processing & Music-Domain Deep Learing</ResumP>
+
+      <FH3>Teaching Experiences</FH3>
+      <ResumeHeader>
+        <h4>GCT731 Topics in Music Technology: Cognitive Science of Music &middot; KAIST GSCT</h4>
+        <h5>Spring, 2020</h5>
+      </ResumeHeader>
+      <ResumeHeader>
+        <h4>GCT576 Social Computing &middot; KAIST GSCT</h4>
+        <h5>Fall, 2019</h5>
+      </ResumeHeader>
       
       <H3>Skills</H3>
       <Ul>
