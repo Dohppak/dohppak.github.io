@@ -154,16 +154,16 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       
       <H3>Experiences & Talks</H3>
       <Ul>
-        <li>Visiting Student &middot; Music and Audio Research Laboratory, New York University, United States</li>
-        <li>Korean translator, NYU DeepLearning DS-GA 1008 &middot; Yann LeCun & Alfredo Canziani {LeCun}</li>
-        <li>Digital Signal Processing and Speech Recognition, SK planet 2020 {SKplanet}</li>
-        <li>Pycon Tutorial: Music and DeepLearning, PyconKR 2019 {Pycon}</li>
+        <li>Visiting Student, Music and Audio Research Laboratory, New York University, United States</li>
+        <li>Korean translator, NYU Deep Learning DS-GA 1008, Yann LeCun & Alfredo Canziani &middot; {LeCun}</li>
+        <li>Digital Signal Processing and Speech Recognition, SK planet 2020 &middot; {SKplanet}</li>
+        <li>Pycon Tutorial: Music and Deep Learning, PyconKR 2019 &middot; {Pycon}</li>
       </Ul>
 
       <H3>Teaching Experiences</H3>
       <Ul>
-        <li>GCT731 Topics in Music Technology: Cognitive Science of Music &middot; KAIST GSCT (Spring, 2020)</li>
-        <li>GCT576 Social Computing &middot; KAIST GSCT (Fall, 2019)</li>
+        <li>TA, GCT731 Topics in Music Technology: Cognitive Science of Music &middot; KAIST GSCT (Spring, 2020)</li>
+        <li>TA, GCT576 Social Computing &middot; KAIST GSCT (Fall, 2019)</li>
       </Ul>
       
       <H3>Skills</H3>
