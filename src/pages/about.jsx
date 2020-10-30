@@ -149,9 +149,15 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
       <ResumeHeader>
         <h4>Musical Word Embedding: Bridging the Gap between Listening Contexts and Music</h4>
       </ResumeHeader>
-      <ResumP>Seungheon Doh, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
+      <ResumP><b>Seungheon Doh</b>, Jongpil Lee, Tae Hong Park, and Juhan Nam</ResumP>
       <ResumP>Machine Learning for Media Discovery Workshop, International Conference on Machine Learning (ICML), 2020 &middot; {Doh2020} &middot; {Doh2020Demo}</ResumP>
       
+      <ResumeHeader>
+        <h4>TräumerAI: Dreaming Music with StyleGAN</h4>
+      </ResumeHeader>
+      <ResumP>Dasaem Jeong, <b>Seungheon Doh</b>, Taegyun Kwon</ResumP>
+      <ResumP>Machine Learning for Creativity and Design Workshop, Neural Information Processing Systems (NeurIPS), 2020</ResumP>
+
       <H3>Experiences & Talks</H3>
       <Ul>
         <li>Visiting Student, Music and Audio Research Laboratory, New York University, United States</li>
