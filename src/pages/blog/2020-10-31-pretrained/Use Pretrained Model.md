@@ -71,9 +71,6 @@ dir(models)
 
 Use the `dir(models)` command to see what kind of pre-trained models we currently have available. In this post, we use the representative model resnet50. Resnet presents the perspective of viewing data from various perspectives by combining X coming through the input with the feature learned by the Convolution Block again. The relevant code is attached below.
 
-----
-
-`dir(models)` 명령어를 확인해 보면 우리가 현재 사용할수 있는 pretrained 모델의 종류를 알 수 있습니다. 본 포스팅에서는 저희는 대표적인 모델 resnet50을 사용합니다. resnet은 input으로 들어오는 X를 Convolution Block에 의해 학습된 Feature와 다시 결합함으로서 다양한 관점에서 데이터를 바라보는 시각을 제시합니다. 관련된 코드는 아래 첨부되어 있습니다.
 
 ```python
 from torch import nn
@@ -106,6 +103,16 @@ class Residual(nn.Module):  #@save
         return F.relu(Y)
 ```
 
+# Residual Connection with ResNet
+
+In ResNet, the value of the input passes through the convoluation and is added back to the learned feature vector. This structure is called a Shortcut. In general, Shortcut uses an identity shortcut, that is, a method of adding the input feature map x to the output as it is.
+
+Whenever the number of output feature maps is doubled, the horizontal and vertical size of the feature map is reduced by half. In this case, a convolution operation with stride=2 is used instead of pooling. In this case, the feature map size should be reduced in Shortcut as well, and in this case, use a projection shortcut instead of an identity shortcut. Through this shortcut structure, it becomes possible to perform robust learning on vanishing gradients.
+
+In addition, in models of ResNet-50 or higher, the number of feature maps is large, so the amount of computation increases. The characteristic feature is that the bottleneck structure seen in the Inception module is used to superimpose the bottleneck residual block.
+
+<img src="../img/resnet-block.png" width = 80%>
+- Img reference: https://d2l.ai/chapter_convolutional-modern/resnet.html
 
 ```python
 resnet50 = models.resnet50(pretrained=True)
