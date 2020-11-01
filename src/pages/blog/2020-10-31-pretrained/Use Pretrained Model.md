@@ -2,7 +2,7 @@
 title: "Use Pretrained Model with torchvision"
 date: "2020-10-31"
 path: /blog/pretrained
-tags: Vision, Image Classifciation Model Serving
+tags: Vision, Image Classifciation, Model Serving
 layout: post
 ---
 
@@ -62,7 +62,7 @@ We will focus on using a pre-trained model to predict the label of the input, so
 - Forward Pass : 사전 훈련 된 가중치를 사용하여 출력 벡터를 찾습니다. 이 출력 벡터의 각 요소는 모델이 특정 클래스에 속하는 입력 이미지를 예측하는 신뢰도를 설명합니다.
 - Confindence Score를 기반으로 예측을 표시합니다.
 
-### 1.0 Download Torch Model
+# Download Torch Model
 
 Torchvision supports various pre-trained models. These pre-trained models are neural network models trained on large benchmark data sets such as ImageNet. The deep learning community has benefited a lot from these open-source models, which is also one of the main reasons for the rapid development of computer vision research. Other researchers and practitioners can use these state-of-the-art models instead of inventing everything from scratch.
 
@@ -71,7 +71,6 @@ Torchvision supports various pre-trained models. These pre-trained models are ne
 import torch
 from torchvision import models
 ```
-
 
 ```python
 dir(models)
@@ -124,14 +123,11 @@ dir(models)
      'wide_resnet101_2',
      'wide_resnet50_2']
 
-
-
-`dir(models)` 명령어를 확인해 보면 우리가 현재 사용할수 있는 pretrained 모델의 종류를 알 수 있습니다. 본 포스팅에서는 저희는 대표적인 모델 resnet50을 사용합니다. resnet은 input으로 들어오는 X를 Convolution Block에 의해 학습된 Feature와 다시 결합함으로서 다양한 관점에서 데이터를 바라보는 시각을 제시합니다. 관련된 코드는 아래 첨부되어 있습니다.
+Use the `dir(models)` command to see what kind of pre-trained models we currently have available. In this post, we use the representative model resnet50. Resnet presents the perspective of viewing data from various perspectives by combining X coming through the input with the feature learned by the Convolution Block again. The relevant code is attached below.
 
 ----
 
-Use the `dir(models)` command to see what kind of pre-trained models we currently have available. In this post, we use the representative model resnet50. Resnet presents the perspective of viewing data from various perspectives by combining X coming through the input with the feature learned by the Convolution Block again. The relevant code is attached below.
-
+`dir(models)` 명령어를 확인해 보면 우리가 현재 사용할수 있는 pretrained 모델의 종류를 알 수 있습니다. 본 포스팅에서는 저희는 대표적인 모델 resnet50을 사용합니다. resnet은 input으로 들어오는 X를 Convolution Block에 의해 학습된 Feature와 다시 결합함으로서 다양한 관점에서 데이터를 바라보는 시각을 제시합니다. 관련된 코드는 아래 첨부되어 있습니다.
 
 ```python
 from torch import nn
@@ -172,14 +168,9 @@ resnet50 = models.resnet50(pretrained=True)
     Downloading: "https://download.pytorch.org/models/resnet50-19c8e357.pth" to /Users/seungheondoh/.cache/torch/checkpoints/resnet50-19c8e357.pth
     100%|██████████| 97.8M/97.8M [00:10<00:00, 9.38MB/s]
 ```
-
-우리는 `pretrained=True` 라는 명령어를 통해 https://download.pytorch.org/models/resnet50-19c8e357.pth 에서 사전에 학습되어 있는 weight를 다운로드 받을 수 있습니다. 이때 거대한 데이터와 Computational Infra가 100M가 안되는 지식으로 압축되어 있는 것을 확인 할 수 있습니다.
-
-----
-
+We can download pretrained weights from https://download.pytorch.org/models/resnet50-19c8e357.pth through the command `pretrained=True`. At this time, you can see that huge data and Computational Infra are compressed into less than 100M of knowledge.
 
 Once we have the model with us, the next step is to transform the input image with specific format. If the data domain of the input is different, the result cannot be obtained significantly. (When sentence input is inserted in the vision model or voice input is inserted)
-
 
 ```python
 from torchvision import transforms
