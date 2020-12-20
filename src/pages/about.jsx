@@ -15,6 +15,7 @@ const Deep1 = <a href="https://www.coursera.org/account/accomplishments/speciali
 const Deep2 = <a href="https://confirm.udacity.com/A5NPKLDW">Deep Learning</a>;
 const Doh2020 = <a href="https://arxiv.org/pdf/2008.01190.pdf">PDF</a>;
 const Doh2020Demo = <a href="https://dohppak.github.io/MusicWordVec/">Demo</a>;
+const Jeong_NIPS_2020Demo = <a href="https://drive.google.com/file/d/1PNMFaglPl36PDCHNX_RPu8XABw1vL0iu/view">PDF</a>;
 const Pycon = <a href="https://github.com/Dohppak/Pycon_Tutorial_Music_DeepLearing/">Github</a>;
 const SKplanet = <a href="https://www.youtube.com/watch?v=RxbkEjV7c0o&t=111s/">Video</a>;
 const LeCun = <a href="https://github.com/Atcold/pytorch-Deep-Learning">Github</a>;
@@ -158,7 +159,7 @@ const About = ({ data: { site: { siteMetadata: site } } }) => (
         <h4>TräumerAI: Dreaming Music with StyleGAN</h4>
       </ResumeHeader>
       <ResumP>Dasaem Jeong, Seungheon Doh, Taegyun Kwon</ResumP>
-      <ResumP>Machine Learning for Creativity and Design Workshop, Neural Information Processing Systems (NeurIPS), 2020</ResumP>
+      <ResumP>Machine Learning for Creativity and Design Workshop, Neural Information Processing Systems (NeurIPS), 2020 &middot; {Jeong_NIPS_2020Demo}</ResumP>
 
       <H3>Experiences & Talks</H3>
       <Ul>
